@@ -15,7 +15,4 @@
 | Placement fallback audit in Section S2 | `results_raw/placement_audit_500.csv` |
 | Clean-image negative control in Section S11 | `results_summaries/clean_negative_control_summary.json`; raw: `results_raw/clean_negative_control_results.csv` |
 
-The LaMa aggregate summary is present, but its original runner and per-image paired output are not in the confirmed evidence archive. Do not claim full LaMa rerunnability until those files are added.
-
-
-The LaMa runner, full 382-image raw outputs, matched clean/attacked records, paired statistical outputs and environment export are now included in this package. The LaMa checkpoint, COCO image/annotation files and WAM checkpoint remain upstream dependencies.
+The LaMa runner, full 382-image raw outputs, matched clean/attacked records, paired statistical outputs and environment export are included in this package. The LaMa checkpoint, COCO image/annotation files and WAM checkpoint remain upstream dependencies and must be obtained separately under their respective terms.
