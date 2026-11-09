@@ -1,0 +1,76 @@
+{
+  "images": 500,
+  "attacks": [
+    "none",
+    "erase40",
+    "randomcrop50",
+    "cornercrop50",
+    "splicing20"
+  ],
+  "result_rows": 2500,
+  "geometry_matches": 500,
+  "baseline_metric_mismatches": 0,
+  "max_metric_diff_vs_main": 0.0,
+  "timings_ms_over_all_image_attack_pairs": {
+    "region_selection_ms": {
+      "mean": 0.20282239094376564,
+      "median": 0.19980315119028091,
+      "p95": 0.23625157773494712
+    },
+    "full_wam_embed_ms": {
+      "mean": 8.112066488713026,
+      "median": 7.049964740872383,
+      "p95": 11.154573783278465
+    },
+    "mask_composition_ms": {
+      "mean": 0.04885466396808624,
+      "median": 0.04740618169307709,
+      "p95": 0.05660466849803923
+    },
+    "embed_pipeline_ms": {
+      "mean": 8.363743543624878,
+      "median": 7.3011890053749084,
+      "p95": 11.407010164111853
+    },
+    "original_decode_total_ms": {
+      "mean": 8.485938163101673,
+      "median": 8.324767462909222,
+      "p95": 9.192442521452902
+    },
+    "original_detect_gpu_ms": {
+      "mean": 8.244281237602234,
+      "median": 8.09164810180664,
+      "p95": 8.94205446243286
+    },
+    "original_wall_minus_detect_gpu_ms": {
+      "mean": 0.24165692549943923,
+      "median": 0.23339630663394928,
+      "p95": 0.29275501519441605
+    },
+    "voting_decode_total_ms": {
+      "mean": 12.780573200434446,
+      "median": 12.616166844964027,
+      "p95": 16.009964421391487
+    },
+    "voting_detect_gpu_ms": {
+      "mean": 7.983769337654114,
+      "median": 7.926784038543701,
+      "p95": 8.194828462600707
+    },
+    "voting_wall_minus_detect_gpu_ms": {
+      "mean": 4.796803862780332,
+      "median": 4.621610634028912,
+      "p95": 8.011246287077663
+    },
+    "voting_minus_original_ms": {
+      "mean": 4.294635037332773,
+      "median": 4.13980707526207,
+      "p95": 7.60156689211726
+    }
+  },
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "torch_version": "2.3.1+cu121",
+  "iou_threshold": 0.03,
+  "seed": 3,
+  "interpretation_note": "CUDA event time measures work inside wam.detect(). Wall time minus this GPU time is an approximate residual, not a pure Python-only measurement. Timing includes attack inference but excludes image loading and model initialization."
+}

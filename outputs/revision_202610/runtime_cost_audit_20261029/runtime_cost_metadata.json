@@ -1,0 +1,15 @@
+{
+  "python": "3.10.20 (main, Mar 11 2026, 17:46:40) [GCC 14.3.0]",
+  "torch": "2.3.1+cu121",
+  "cuda": "12.1",
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "source_sha256": {
+    "timing_script": "6ad30e0d93332201b623311299cd4c67d70620023baf37ba4252f73cd48bf6fc",
+    "iou_runner": "da4675d5a8389408c620d1651fb98a4523019eac85f295ec2030f1f7d606125c",
+    "anchor_runner": "007525200fa4971af8cdb05e60aeb27bb6cd5597734004cc434ae3b22a6cc7d2",
+    "region_implementation": "6bbe3be800852fe4833a8a56386cb11c14edcbb46bba9787b8cb97bb020b4acd",
+    "attack_implementation": "250798e2ebc025d14573f2a191b93039a3c9991cf69ac5b7baff2832a4cee6a9",
+    "model_params": "d133a504d126b56b3e980add9fc014d718e3635a0f5740d8d6dc3190007fb476",
+    "model_checkpoint": "90ef232384e023bd63245eb0c131abd69d2afc7b8f17a71ccedceb542bf009e2"
+  }
+}

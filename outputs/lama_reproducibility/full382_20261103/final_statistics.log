@@ -1,0 +1,36 @@
+
+================================================================================
+LA MA PAIRED ANALYSIS COMPLETE
+================================================================================
+
+1. STRATEGY SUMMARY
+       strategy  clean_vote_bitacc_pct  attacked_vote_bitacc_pct  vote_drop_mean_pp  vote_drop_ci95_low  vote_drop_ci95_high  vote_drop_wilcoxon_holm_p  recovery_loss_rate_pct
+         hybrid                96.8341                   94.9526             1.8815              1.3416               2.4542                        0.0                 12.8272
+         single                97.0795                   94.0690             3.0105              2.2170               3.8615                        0.0                 13.0890
+  single_random                96.7605                   93.7418             3.0187              2.2251               3.8860                        0.0                 12.0419
+         random                96.9895                   95.2961             1.6934              1.2189               2.2006                        0.0                  9.9476
+        texture                98.0857                   96.2778             1.8079              1.2514               2.4378                        0.0                  8.3770
+wam_random_mask                96.8423                   95.7052             1.1371              0.7199               1.5952                        0.0                  6.5445
+
+2. HYBRID VS OTHER STRATEGIES
+strategy_a      strategy_b  mean_drop_a_pp  mean_drop_b_pp  a_minus_b_drop_pp  drop_difference_ci95_low  drop_difference_ci95_high  bitacc_holm_p  a_minus_b_loss_rate_pp  recovery_holm_p
+    hybrid          single          1.8815          3.0105            -1.1289                   -1.9143                    -0.3845         0.2353                 -0.2618           1.0000
+    hybrid   single_random          1.8815          3.0187            -1.1371                   -1.9388                    -0.3763         0.2353                  0.7853           1.0000
+    hybrid          random          1.8815          1.6934             0.1882                   -0.2700                     0.6545         1.0000                  2.8796           1.0000
+    hybrid         texture          1.8815          1.8079             0.0736                   -0.5890                     0.7035         1.0000                  4.4503           0.5099
+    hybrid wam_random_mask          1.8815          1.1371             0.7444                    0.2045                     1.3089         0.3775                  6.2827           0.0517
+
+3. INTERPRETATION
+For strategy_a minus strategy_b degradation:
+Negative = strategy_a suffers LESS degradation.
+Positive = strategy_a suffers MORE degradation.
+A Holm-adjusted p < 0.05 indicates a statistically significant paired difference.
+
+4. OUTPUT FILES
+all_pairwise_comparisons.csv | 4490 bytes
+hybrid_vs_all_comparisons.csv | 1692 bytes
+metadata.json | 623 bytes
+paired_analysis_all_images.csv | 651858 bytes
+strategy_summary.csv | 3071 bytes
+
+FINAL ANALYSIS: PASS

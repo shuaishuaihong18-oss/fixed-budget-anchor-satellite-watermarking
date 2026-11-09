@@ -1,0 +1,23 @@
+{
+  "experiment": "LaMa object inpainting paired analysis",
+  "images": 382,
+  "strategies": [
+    "hybrid",
+    "single",
+    "single_random",
+    "random",
+    "texture",
+    "wam_random_mask"
+  ],
+  "rows": 2292,
+  "primary_metric": "vote_bitacc",
+  "paired_degradation": "clean minus attacked",
+  "positive_degradation": "performance deterioration",
+  "bootstrap_repetitions": 10000,
+  "bootstrap_seed": 20261104,
+  "confidence_interval": "95% percentile paired bootstrap",
+  "bitacc_test": "Wilcoxon signed-rank",
+  "recovery_test": "Exact McNemar",
+  "multiple_comparison": "Holm correction",
+  "pairwise_tests": 15
+}

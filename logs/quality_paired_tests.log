@@ -1,0 +1,33 @@
+Comparisons: 30
+Holm correction family: all 30 comparisons
+Saved: outputs/revision_202610/quality_only_20261027/quality_paired_tests_holm.csv
+COCO500    psnr   hybrid_vs_single             diff=+0.209463 CI95=[+0.143522, +0.276505] p=3.13e-12 Holm=8.451e-11
+COCO500    psnr   hybrid_vs_single_random      diff=+0.065973 CI95=[-0.030992, +0.159325] p=0.01324 Holm=0.1986
+COCO500    psnr   hybrid_vs_random             diff=-0.162514 CI95=[-0.223999, -0.103257] p=5.411e-08 Holm=1.353e-06
+COCO500    psnr   hybrid_vs_texture            diff=+1.446630 CI95=[+1.358117, +1.538186] p=1.51e-82 Holm=4.53e-81
+COCO500    psnr   hybrid_vs_wam_random_mask    diff=+0.048222 CI95=[-0.033227, +0.128499] p=0.3971 Holm=1
+COCO500    ssim   hybrid_vs_single             diff=-0.000425 CI95=[-0.000599, -0.000261] p=1.746e-06 Holm=4.016e-05
+COCO500    ssim   hybrid_vs_single_random      diff=-0.000044 CI95=[-0.000287, +0.000242] p=0.01459 Holm=0.2043
+COCO500    ssim   hybrid_vs_random             diff=+0.000095 CI95=[-0.000035, +0.000225] p=0.0336 Holm=0.4033
+COCO500    ssim   hybrid_vs_texture            diff=-0.001323 CI95=[-0.001541, -0.001113] p=1.414e-42 Holm=4.102e-41
+COCO500    ssim   hybrid_vs_wam_random_mask    diff=+0.000504 CI95=[+0.000296, +0.000723] p=3.06e-06 Holm=6.732e-05
+COCO500    lpips  hybrid_vs_single             diff=+0.000668 CI95=[+0.000474, +0.000874] p=1.182e-10 Holm=3.073e-09
+COCO500    lpips  hybrid_vs_single_random      diff=+0.000183 CI95=[-0.000088, +0.000454] p=0.09232 Holm=0.9232
+COCO500    lpips  hybrid_vs_random             diff=-0.000196 CI95=[-0.000342, -0.000052] p=0.001263 Holm=0.02273
+COCO500    lpips  hybrid_vs_texture            diff=+0.000748 CI95=[+0.000451, +0.001053] p=4.7e-07 Holm=1.128e-05
+COCO500    lpips  hybrid_vs_wam_random_mask    diff=-0.000393 CI95=[-0.000614, -0.000185] p=0.0001117 Holm=0.002234
+DIV2K100   psnr   hybrid_vs_single             diff=+0.313605 CI95=[+0.175527, +0.452167] p=2.65e-05 Holm=0.0005565
+DIV2K100   psnr   hybrid_vs_single_random      diff=+0.088065 CI95=[-0.058471, +0.241245] p=0.1193 Holm=1
+DIV2K100   psnr   hybrid_vs_random             diff=-0.201924 CI95=[-0.363499, -0.054242] p=0.05082 Holm=0.5591
+DIV2K100   psnr   hybrid_vs_texture            diff=+1.198209 CI95=[+1.026137, +1.379519] p=1.961e-17 Holm=5.49e-16
+DIV2K100   psnr   hybrid_vs_wam_random_mask    diff=-0.171347 CI95=[-0.313046, -0.025972] p=0.02851 Holm=0.3706
+DIV2K100   ssim   hybrid_vs_single             diff=-0.000225 CI95=[-0.000574, +0.000072] p=0.6599 Holm=1
+DIV2K100   ssim   hybrid_vs_single_random      diff=+0.000136 CI95=[-0.000170, +0.000446] p=0.5428 Holm=1
+DIV2K100   ssim   hybrid_vs_random             diff=+0.000319 CI95=[+0.000045, +0.000646] p=0.1526 Holm=1
+DIV2K100   ssim   hybrid_vs_texture            diff=-0.000554 CI95=[-0.001070, -0.000123] p=0.006671 Holm=0.1067
+DIV2K100   ssim   hybrid_vs_wam_random_mask    diff=+0.000681 CI95=[+0.000300, +0.001121] p=0.000608 Holm=0.01155
+DIV2K100   lpips  hybrid_vs_single             diff=+0.000362 CI95=[-0.000086, +0.000900] p=0.6133 Holm=1
+DIV2K100   lpips  hybrid_vs_single_random      diff=-0.000205 CI95=[-0.000750, +0.000331] p=0.3204 Holm=1
+DIV2K100   lpips  hybrid_vs_random             diff=-0.000099 CI95=[-0.000442, +0.000240] p=0.3713 Holm=1
+DIV2K100   lpips  hybrid_vs_texture            diff=+0.000046 CI95=[-0.000635, +0.000712] p=0.8879 Holm=1
+DIV2K100   lpips  hybrid_vs_wam_random_mask    diff=-0.000609 CI95=[-0.001025, -0.000231] p=0.003212 Holm=0.05461

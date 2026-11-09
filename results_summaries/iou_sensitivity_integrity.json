@@ -1,0 +1,39 @@
+{
+  "n_rows": 12500,
+  "n_images": 500,
+  "thresholds": [
+    0.0,
+    0.01,
+    0.03,
+    0.05,
+    0.1
+  ],
+  "attacks": [
+    "none",
+    "erase40",
+    "randomcrop50",
+    "cornercrop50",
+    "splicing20"
+  ],
+  "expected_rows": 12500,
+  "attack_seed_consistency": true,
+  "default_reference_max_abs_differences": {
+    "actual_area": 4.994039534966799e-07,
+    "orig_bitacc": 0.0,
+    "vote_bitacc": 0.0,
+    "orig_recovery31": 0.0,
+    "vote_recovery31": 0.0
+  },
+  "max_area_spread_across_attacks": 0.0,
+  "max_psnr_spread_across_attacks": 0.0,
+  "max_ssim_spread_across_attacks": 0.0,
+  "bootstrap_replicates": 10000,
+  "bootstrap_ci": "paired image-level percentile 95% CI",
+  "test": "two-sided Wilcoxon signed-rank",
+  "holm_families": {
+    "overall": "four threshold comparisons within each metric",
+    "by_attack": "20 comparisons per metric across five attacks and four candidate thresholds",
+    "quality": "four threshold comparisons within each metric"
+  },
+  "difference_direction": "candidate IoU minus baseline IoU=0.03; positive values favor the candidate"
+}

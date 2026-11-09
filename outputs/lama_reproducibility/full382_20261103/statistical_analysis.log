@@ -1,0 +1,133 @@
+===========================================================================
+1. DATA INTEGRITY
+===========================================================================
+Rows: 2292
+Images: 382
+Strategies: 6
+Missing: 0
+Duplicate keys: 0
+
+===========================================================================
+2. PAIRED CLEAN VS ATTACKED
+===========================================================================
+       strategy            metric  clean_mean  attacked_mean  delta_attack_minus_clean  delta_ci95_low  delta_ci95_high  p_holm
+         single   Original BitAcc     0.96744        0.93496                  -0.03248        -0.04180         -0.02430 0.00000
+         single     Voting BitAcc     0.97080        0.94069                  -0.03010        -0.03894         -0.02201 0.00000
+         single Original Recovery     0.81675        0.68063                  -0.13613        -0.17539         -0.09948 0.00000
+         single   Voting Recovery     0.84031        0.71990                  -0.12042        -0.15707         -0.08639 0.00000
+  single_random   Original BitAcc     0.96441        0.93374                  -0.03068        -0.03902         -0.02307 0.00000
+  single_random     Voting BitAcc     0.96760        0.93742                  -0.03019        -0.03870         -0.02233 0.00000
+  single_random Original Recovery     0.81152        0.69110                  -0.12042        -0.15445         -0.08901 0.00000
+  single_random   Voting Recovery     0.81937        0.71466                  -0.10471        -0.14136         -0.07068 0.00000
+         random   Original BitAcc     0.96621        0.94756                  -0.01865        -0.02421         -0.01350 0.00000
+         random     Voting BitAcc     0.96990        0.95296                  -0.01693        -0.02217         -0.01219 0.00000
+         random Original Recovery     0.81414        0.70942                  -0.10471        -0.13613         -0.07592 0.00000
+         random   Voting Recovery     0.81675        0.73037                  -0.08639        -0.11780         -0.05497 0.00000
+        texture   Original BitAcc     0.97873        0.96139                  -0.01734        -0.02315         -0.01219 0.00000
+        texture     Voting BitAcc     0.98086        0.96278                  -0.01808        -0.02438         -0.01252 0.00000
+        texture Original Recovery     0.85602        0.78534                  -0.07068        -0.10471         -0.03927 0.00010
+        texture   Voting Recovery     0.85602        0.79581                  -0.06021        -0.09424         -0.02880 0.00066
+wam_random_mask   Original BitAcc     0.96417        0.95362                  -0.01055        -0.01497         -0.00614 0.00004
+wam_random_mask     Voting BitAcc     0.96842        0.95705                  -0.01137        -0.01603         -0.00720 0.00000
+wam_random_mask Original Recovery     0.79058        0.73037                  -0.06021        -0.09162         -0.02880 0.00047
+wam_random_mask   Voting Recovery     0.78796        0.74607                  -0.04188        -0.07068         -0.01309 0.00607
+         hybrid   Original BitAcc     0.96204        0.94429                  -0.01775        -0.02389         -0.01227 0.00000
+         hybrid     Voting BitAcc     0.96834        0.94953                  -0.01882        -0.02446         -0.01342 0.00000
+         hybrid Original Recovery     0.78010        0.69634                  -0.08377        -0.12042         -0.04974 0.00002
+         hybrid   Voting Recovery     0.80890        0.69372                  -0.11518        -0.15183         -0.08115 0.00000
+
+===========================================================================
+3. FRIEDMAN TEST: SIX STRATEGIES
+===========================================================================
+           metric  statistic    p_raw   p_holm
+  Original BitAcc  27.468022 0.000046 0.000185
+    Voting BitAcc  16.950606 0.004594 0.004594
+Original Recovery  24.368341 0.000184 0.000553
+  Voting Recovery  20.804465 0.000882 0.001764
+
+===========================================================================
+4. PAIRED POST-HOC COMPARISONS
+===========================================================================
+           metric      strategy_A      strategy_B  mean_difference_A_minus_B  wilcoxon_stat    p_raw   p_holm
+  Original BitAcc          single         texture                  -0.026423        17840.5 0.000002 0.000126
+  Original BitAcc         texture          hybrid                   0.017098        18869.5 0.000150 0.008559
+  Original BitAcc   single_random         texture                  -0.027651        20396.0 0.000433 0.023374
+  Original BitAcc          random         texture                  -0.013825        19945.0 0.000700 0.037112
+  Original BitAcc          single wam_random_mask                  -0.018652        22003.0 0.002856 0.131358
+  Original BitAcc   single_random wam_random_mask                  -0.019879        22489.0 0.014776 0.650146
+  Original BitAcc          single   single_random                   0.001227        25074.0 0.309083 1.000000
+  Original BitAcc          single          random                  -0.012598        24343.5 0.128815 1.000000
+  Original BitAcc          single          hybrid                  -0.009326        23353.0 0.091902 1.000000
+  Original BitAcc   single_random          random                  -0.013825        24800.5 0.196129 1.000000
+  Original BitAcc   single_random          hybrid                  -0.010553        24588.5 0.470777 1.000000
+  Original BitAcc          random wam_random_mask                  -0.006054        25396.0 0.237715 1.000000
+  Original BitAcc          random          hybrid                   0.003272        23052.5 0.327325 1.000000
+  Original BitAcc         texture wam_random_mask                   0.007772        22941.5 0.098765 1.000000
+  Original BitAcc wam_random_mask          hybrid                   0.009326        24237.0 0.079611 1.000000
+Original Recovery          single         texture                  -0.104712         9366.0 0.000045 0.002584
+Original Recovery   single_random         texture                  -0.094241        10338.5 0.000276 0.015474
+Original Recovery         texture          hybrid                   0.089005         9139.5 0.000290 0.015929
+Original Recovery          random         texture                  -0.075916        10447.0 0.002366 0.113548
+Original Recovery         texture wam_random_mask                   0.054974        10880.0 0.022740 0.955092
+Original Recovery          single   single_random                  -0.010471        13318.5 0.658687 1.000000
+Original Recovery          single          random                  -0.028796        14652.0 0.268925 1.000000
+Original Recovery          single wam_random_mask                  -0.049738        13320.0 0.056188 1.000000
+Original Recovery          single          hybrid                  -0.015707        12672.5 0.502335 1.000000
+Original Recovery   single_random          random                  -0.018325        13858.0 0.458088 1.000000
+Original Recovery   single_random wam_random_mask                  -0.039267        12506.0 0.111836 1.000000
+Original Recovery   single_random          hybrid                  -0.005236        14259.0 0.829248 1.000000
+Original Recovery          random wam_random_mask                  -0.020942        12330.0 0.371093 1.000000
+Original Recovery          random          hybrid                   0.013089        10819.0 0.541301 1.000000
+Original Recovery wam_random_mask          hybrid                   0.034031        12240.0 0.158526 1.000000
+    Voting BitAcc   single_random         texture                  -0.025360        20082.5 0.000763 0.039650
+    Voting BitAcc         texture          hybrid                   0.013253        20148.0 0.000857 0.043698
+    Voting BitAcc          single         texture                  -0.022088        20456.0 0.001721 0.086063
+    Voting BitAcc          random         texture                  -0.009817        21429.5 0.018122 0.779240
+    Voting BitAcc          single   single_random                   0.003272        27405.0 0.998615 1.000000
+    Voting BitAcc          single          random                  -0.012271        24633.0 0.091110 1.000000
+    Voting BitAcc          single wam_random_mask                  -0.016361        23607.5 0.043505 1.000000
+    Voting BitAcc          single          hybrid                  -0.008835        25347.5 0.460835 1.000000
+    Voting BitAcc   single_random          random                  -0.015543        22741.0 0.051881 1.000000
+    Voting BitAcc   single_random wam_random_mask                  -0.019634        23642.5 0.029488 1.000000
+    Voting BitAcc   single_random          hybrid                  -0.012107        23738.5 0.193970 1.000000
+    Voting BitAcc          random wam_random_mask                  -0.004090        25680.5 0.474206 1.000000
+    Voting BitAcc          random          hybrid                   0.003436        23275.5 0.358162 1.000000
+    Voting BitAcc         texture wam_random_mask                   0.005726        22730.5 0.045752 1.000000
+    Voting BitAcc wam_random_mask          hybrid                   0.007526        24505.5 0.210197 1.000000
+  Voting Recovery         texture          hybrid                   0.102094         7820.0 0.000023 0.001378
+  Voting Recovery   single_random         texture                  -0.081152        11322.0 0.001836 0.089945
+  Voting Recovery          single         texture                  -0.075916        10752.0 0.002637 0.123939
+  Voting Recovery          random         texture                  -0.065445        10509.0 0.007356 0.331021
+  Voting Recovery          single   single_random                   0.005236        13660.0 0.825199 1.000000
+  Voting Recovery          single          random                  -0.010471        15387.0 0.683091 1.000000
+  Voting Recovery          single wam_random_mask                  -0.026178        13796.5 0.297147 1.000000
+  Voting Recovery          single          hybrid                   0.026178        12901.0 0.280888 1.000000
+  Voting Recovery   single_random          random                  -0.015707        13279.5 0.512691 1.000000
+  Voting Recovery   single_random wam_random_mask                  -0.031414        12561.5 0.195668 1.000000
+  Voting Recovery   single_random          hybrid                   0.020942        14133.0 0.404248 1.000000
+  Voting Recovery          random wam_random_mask                  -0.015707        12366.0 0.496906 1.000000
+  Voting Recovery          random          hybrid                   0.036649         9409.5 0.089555 1.000000
+  Voting Recovery         texture wam_random_mask                   0.049738        11220.0 0.039318 1.000000
+  Voting Recovery wam_random_mask          hybrid                   0.052356        11203.5 0.031033 1.000000
+
+===========================================================================
+5. FINAL DESCRIPTIVE SUMMARY
+===========================================================================
+                 images  clean_orig_bitacc  attacked_orig_bitacc  clean_vote_bitacc  attacked_vote_bitacc  clean_orig_recovery  attacked_orig_recovery  clean_vote_recovery  attacked_vote_recovery
+strategy                                                                                                                                                                                           
+single              382            0.96744               0.93496            0.97080               0.94069              0.81675                 0.68063              0.84031                 0.71990
+single_random       382            0.96441               0.93374            0.96760               0.93742              0.81152                 0.69110              0.81937                 0.71466
+random              382            0.96621               0.94756            0.96990               0.95296              0.81414                 0.70942              0.81675                 0.73037
+texture             382            0.97873               0.96139            0.98086               0.96278              0.85602                 0.78534              0.85602                 0.79581
+wam_random_mask     382            0.96417               0.95362            0.96842               0.95705              0.79058                 0.73037              0.78796                 0.74607
+hybrid              382            0.96204               0.94429            0.96834               0.94953              0.78010                 0.69634              0.80890                 0.69372
+
+===========================================================================
+STATISTICAL ANALYSIS COMPLETE
+===========================================================================
+Output directory: outputs/revision_202610/lama_object_inpainting_full382_20261103/statistical_analysis
+1. paired_attack_effect.csv
+2. friedman_strategy_test.csv
+3. strategy_pairwise_posthoc.csv
+4. strategy_descriptive_summary.csv
+PASS

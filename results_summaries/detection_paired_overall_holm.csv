@@ -1,0 +1,9 @@
+attack,metric,baseline,candidate,mean_diff,ci95_low,ci95_high,p_raw,n_images,n_improved,n_worsened,n_equal,p_holm_global8
+overall_four_attacks,vote_bitacc,grid8_score008,grid4_score008,-0.000234375,-0.0005,0.0,0.08152073317710741,500,14,21,465,0.5706451322397519
+overall_four_attacks,vote_bitacc,grid8_score008,grid16_score008,-3.125e-05,-0.00021875,0.000140625,0.7019777353922323,500,11,11,478,1.0
+overall_four_attacks,vote_bitacc,grid8_score008,grid8_score004,-0.00015625,-0.000375,4.6875e-05,0.19494146027332737,500,11,17,472,1.0
+overall_four_attacks,vote_bitacc,grid8_score008,grid8_score012,-0.00021875,-0.000453125,0.0,0.056072735280853846,500,10,18,472,0.44858188224683077
+overall_four_attacks,vote_recovery31,grid8_score008,grid4_score008,0.0005,-0.0015,0.0025,0.6547208460185769,500,3,2,495,1.0
+overall_four_attacks,vote_recovery31,grid8_score008,grid16_score008,0.0,-0.0015,0.0015,1.0,500,1,1,498,1.0
+overall_four_attacks,vote_recovery31,grid8_score008,grid8_score004,-0.0005,-0.002,0.001,0.5637028616507731,500,1,2,497,1.0
+overall_four_attacks,vote_recovery31,grid8_score008,grid8_score012,-0.0005,-0.0015,0.0,0.31731050786291415,500,0,1,499,1.0

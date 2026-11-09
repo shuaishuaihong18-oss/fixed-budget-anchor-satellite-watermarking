@@ -1,0 +1,149 @@
+Loading frozen WAM model...
+making attention of type 'vanilla' with 64 in_channels
+Working with z of shape (1, 68, 32, 32) = 69632 dimensions.
+making attention of type 'vanilla' with 64 in_channels
+Model loaded successfully from checkpoints/wam_mit.pth
+{'embedder_config': 'configs/embedder.yaml', 'augmentation_config': 'configs/all_augs_multi_wm.yaml', 'extractor_config': 'configs/extractor.yaml', 'attenuation_config': 'configs/attenuation.yaml', 'embedder_model': 'vae_small', 'extractor_model': 'sam_base', 'nbits': 32, 'img_size': 256, 'img_size_extractor': 256, 'attenuation': 'jnd_1_3_blue', 'scaling_w': 2.0, 'scaling_w_schedule': None, 'scaling_i': 1.0, 'roll_probability': 0.2, 'multiple_w': 1.0, 'nb_wm_eval': 5, 'optimizer': 'AdamW,lr=1e-4', 'optimizer_d': None, 'scheduler': 'CosineLRScheduler,lr_min=1e-6,t_initial=100,warmup_lr_init=1e-6,warmup_t=5', 'epochs': 200, 'batch_size': 8, 'batch_size_eval': 16, 'temperature': 1.0, 'workers': 8, 'to_freeze_embedder': None, 'lambda_w': 1.0, 'lambda_w2': 6.0, 'lambda_i': 0.0, 'lambda_d': 0.0, 'balanced': True, 'total_gnorm': 0.0, 'perceptual_loss': 'none', 'disc_start': 0, 'disc_num_layers': 2, 'only_eval': False, 'eval_freq': 5, 'saveimg_freq': 5, 'saveckpt_freq': 50, 'seed': 42, 'debug_slurm': False, 'local_rank': 0, 'master_port': 18482, 'is_slurm_job': True, 'n_nodes': 1, 'node_id': 0, 'global_rank': 0, 'world_size': 8, 'n_gpu_per_node': 8, 'is_master': True, 'multi_node': False, 'distributed': True}
+Images: 500
+Strategies: ['single', 'single_random', 'random', 'texture', 'wam_random_mask', 'hybrid']
+Attacks: ['none', 'erase40', 'randomcrop50', 'cornercrop50', 'splicing20']
+Processed 5/500 images
+Processed 10/500 images
+Processed 15/500 images
+Processed 20/500 images
+Processed 25/500 images
+Processed 30/500 images
+Processed 35/500 images
+Processed 40/500 images
+Processed 45/500 images
+Processed 50/500 images
+Processed 55/500 images
+Processed 60/500 images
+Processed 65/500 images
+Processed 70/500 images
+Processed 75/500 images
+Processed 80/500 images
+Processed 85/500 images
+Processed 90/500 images
+Processed 95/500 images
+Processed 100/500 images
+Processed 105/500 images
+Processed 110/500 images
+Processed 115/500 images
+Processed 120/500 images
+Processed 125/500 images
+Processed 130/500 images
+Processed 135/500 images
+Processed 140/500 images
+Processed 145/500 images
+Processed 150/500 images
+Processed 155/500 images
+Processed 160/500 images
+Processed 165/500 images
+Processed 170/500 images
+Processed 175/500 images
+Processed 180/500 images
+Processed 185/500 images
+Processed 190/500 images
+Processed 195/500 images
+Processed 200/500 images
+Processed 205/500 images
+Processed 210/500 images
+Processed 215/500 images
+Processed 220/500 images
+Processed 225/500 images
+Processed 230/500 images
+Processed 235/500 images
+Processed 240/500 images
+Processed 245/500 images
+Processed 250/500 images
+Processed 255/500 images
+Processed 260/500 images
+Processed 265/500 images
+Processed 270/500 images
+Processed 275/500 images
+Processed 280/500 images
+Processed 285/500 images
+Processed 290/500 images
+Processed 295/500 images
+Processed 300/500 images
+Processed 305/500 images
+Processed 310/500 images
+Processed 315/500 images
+Processed 320/500 images
+Processed 325/500 images
+Processed 330/500 images
+Processed 335/500 images
+Processed 340/500 images
+Processed 345/500 images
+Processed 350/500 images
+Processed 355/500 images
+Processed 360/500 images
+Processed 365/500 images
+Processed 370/500 images
+Processed 375/500 images
+Processed 380/500 images
+Processed 385/500 images
+Processed 390/500 images
+Processed 395/500 images
+Processed 400/500 images
+Processed 405/500 images
+Processed 410/500 images
+Processed 415/500 images
+Processed 420/500 images
+Processed 425/500 images
+Processed 430/500 images
+Processed 435/500 images
+Processed 440/500 images
+Processed 445/500 images
+Processed 450/500 images
+Processed 455/500 images
+Processed 460/500 images
+Processed 465/500 images
+Processed 470/500 images
+Processed 475/500 images
+Processed 480/500 images
+Processed 485/500 images
+Processed 490/500 images
+Processed 495/500 images
+Processed 500/500 images
+
+========== AGGREGATE RESULTS ==========
+full_wam_reference     none     n=500 area=1.0000 orig_BitAcc=0.9992 vote_BitAcc=0.9992 orig_R31=0.9960 vote_R31=0.9940
+full_wam_reference     erase40  n=500 area=1.0000 orig_BitAcc=0.9992 vote_BitAcc=0.9992 orig_R31=0.9960 vote_R31=0.9960
+full_wam_reference     randomcrop50 n=500 area=1.0000 orig_BitAcc=0.9645 vote_BitAcc=0.9665 orig_R31=0.8180 vote_R31=0.8200
+full_wam_reference     cornercrop50 n=500 area=1.0000 orig_BitAcc=0.9545 vote_BitAcc=0.9560 orig_R31=0.7600 vote_R31=0.7640
+full_wam_reference     splicing20 n=500 area=1.0000 orig_BitAcc=0.9983 vote_BitAcc=0.9985 orig_R31=0.9880 vote_R31=0.9940
+single                 none     n=500 area=0.1989 orig_BitAcc=0.9984 vote_BitAcc=0.9984 orig_R31=0.9920 vote_R31=0.9920
+single                 erase40  n=500 area=0.1989 orig_BitAcc=0.7689 vote_BitAcc=0.7700 orig_R31=0.4200 vote_R31=0.4220
+single                 randomcrop50 n=500 area=0.1989 orig_BitAcc=0.9462 vote_BitAcc=0.9484 orig_R31=0.7220 vote_R31=0.7340
+single                 cornercrop50 n=500 area=0.1989 orig_BitAcc=0.8802 vote_BitAcc=0.8872 orig_R31=0.4740 vote_R31=0.4840
+single                 splicing20 n=500 area=0.1989 orig_BitAcc=0.9842 vote_BitAcc=0.9858 orig_R31=0.8980 vote_R31=0.9000
+single_random          none     n=500 area=0.1989 orig_BitAcc=0.9986 vote_BitAcc=0.9988 orig_R31=0.9920 vote_R31=0.9920
+single_random          erase40  n=500 area=0.1989 orig_BitAcc=0.8833 vote_BitAcc=0.8854 orig_R31=0.6660 vote_R31=0.6700
+single_random          randomcrop50 n=500 area=0.1989 orig_BitAcc=0.8788 vote_BitAcc=0.8829 orig_R31=0.5880 vote_R31=0.5980
+single_random          cornercrop50 n=500 area=0.1989 orig_BitAcc=0.7660 vote_BitAcc=0.7748 orig_R31=0.3420 vote_R31=0.3560
+single_random          splicing20 n=500 area=0.1989 orig_BitAcc=0.8929 vote_BitAcc=0.8916 orig_R31=0.7000 vote_R31=0.7100
+random                 none     n=500 area=0.1971 orig_BitAcc=0.9989 vote_BitAcc=0.9988 orig_R31=0.9960 vote_R31=0.9940
+random                 erase40  n=500 area=0.1971 orig_BitAcc=0.9899 vote_BitAcc=0.9905 orig_R31=0.9360 vote_R31=0.9360
+random                 randomcrop50 n=500 area=0.1971 orig_BitAcc=0.8824 vote_BitAcc=0.8878 orig_R31=0.5060 vote_R31=0.5180
+random                 cornercrop50 n=500 area=0.1971 orig_BitAcc=0.8109 vote_BitAcc=0.8140 orig_R31=0.3740 vote_R31=0.3780
+random                 splicing20 n=500 area=0.1971 orig_BitAcc=0.9497 vote_BitAcc=0.9526 orig_R31=0.7800 vote_R31=0.7860
+texture                none     n=500 area=0.1972 orig_BitAcc=0.9982 vote_BitAcc=0.9986 orig_R31=0.9860 vote_R31=0.9920
+texture                erase40  n=500 area=0.1972 orig_BitAcc=0.9685 vote_BitAcc=0.9696 orig_R31=0.8560 vote_R31=0.8700
+texture                randomcrop50 n=500 area=0.1972 orig_BitAcc=0.8820 vote_BitAcc=0.8847 orig_R31=0.5440 vote_R31=0.5460
+texture                cornercrop50 n=500 area=0.1972 orig_BitAcc=0.7918 vote_BitAcc=0.7996 orig_R31=0.3000 vote_R31=0.2920
+texture                splicing20 n=500 area=0.1972 orig_BitAcc=0.9205 vote_BitAcc=0.9237 orig_R31=0.7260 vote_R31=0.7360
+wam_random_mask        none     n=500 area=0.2031 orig_BitAcc=0.9989 vote_BitAcc=0.9989 orig_R31=0.9940 vote_R31=0.9940
+wam_random_mask        erase40  n=500 area=0.2031 orig_BitAcc=0.9952 vote_BitAcc=0.9954 orig_R31=0.9660 vote_R31=0.9720
+wam_random_mask        randomcrop50 n=500 area=0.2031 orig_BitAcc=0.8387 vote_BitAcc=0.8467 orig_R31=0.3220 vote_R31=0.3500
+wam_random_mask        cornercrop50 n=500 area=0.2031 orig_BitAcc=0.8303 vote_BitAcc=0.8361 orig_R31=0.3220 vote_R31=0.3320
+wam_random_mask        splicing20 n=500 area=0.2031 orig_BitAcc=0.9304 vote_BitAcc=0.9346 orig_R31=0.6460 vote_R31=0.6620
+hybrid                 none     n=500 area=0.1972 orig_BitAcc=0.9986 vote_BitAcc=0.9986 orig_R31=0.9900 vote_R31=0.9900
+hybrid                 erase40  n=500 area=0.1972 orig_BitAcc=0.9830 vote_BitAcc=0.9846 orig_R31=0.8860 vote_R31=0.8960
+hybrid                 randomcrop50 n=500 area=0.1972 orig_BitAcc=0.9283 vote_BitAcc=0.9316 orig_R31=0.6720 vote_R31=0.6880
+hybrid                 cornercrop50 n=500 area=0.1972 orig_BitAcc=0.8461 vote_BitAcc=0.8558 orig_R31=0.3780 vote_R31=0.3980
+hybrid                 splicing20 n=500 area=0.1972 orig_BitAcc=0.9669 vote_BitAcc=0.9685 orig_R31=0.8360 vote_R31=0.8500
+
+Saved: outputs/revision_202610/raw/coco500_clean_allattacks/results.csv
+Rows: 17500 Expected: 17500

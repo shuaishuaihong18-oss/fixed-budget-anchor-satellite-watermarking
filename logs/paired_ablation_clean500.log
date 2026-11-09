@@ -1,0 +1,38 @@
+Loading frozen WAM model...
+making attention of type 'vanilla' with 64 in_channels
+Working with z of shape (1, 68, 32, 32) = 69632 dimensions.
+making attention of type 'vanilla' with 64 in_channels
+Model loaded successfully from checkpoints/wam_mit.pth
+{'embedder_config': 'configs/embedder.yaml', 'augmentation_config': 'configs/all_augs_multi_wm.yaml', 'extractor_config': 'configs/extractor.yaml', 'attenuation_config': 'configs/attenuation.yaml', 'embedder_model': 'vae_small', 'extractor_model': 'sam_base', 'nbits': 32, 'img_size': 256, 'img_size_extractor': 256, 'attenuation': 'jnd_1_3_blue', 'scaling_w': 2.0, 'scaling_w_schedule': None, 'scaling_i': 1.0, 'roll_probability': 0.2, 'multiple_w': 1.0, 'nb_wm_eval': 5, 'optimizer': 'AdamW,lr=1e-4', 'optimizer_d': None, 'scheduler': 'CosineLRScheduler,lr_min=1e-6,t_initial=100,warmup_lr_init=1e-6,warmup_t=5', 'epochs': 200, 'batch_size': 8, 'batch_size_eval': 16, 'temperature': 1.0, 'workers': 8, 'to_freeze_embedder': None, 'lambda_w': 1.0, 'lambda_w2': 6.0, 'lambda_i': 0.0, 'lambda_d': 0.0, 'balanced': True, 'total_gnorm': 0.0, 'perceptual_loss': 'none', 'disc_start': 0, 'disc_num_layers': 2, 'only_eval': False, 'eval_freq': 5, 'saveimg_freq': 5, 'saveckpt_freq': 50, 'seed': 42, 'debug_slurm': False, 'local_rank': 0, 'master_port': 18482, 'is_slurm_job': True, 'n_nodes': 1, 'node_id': 0, 'global_rank': 0, 'world_size': 8, 'n_gpu_per_node': 8, 'is_master': True, 'multi_node': False, 'distributed': True}
+Processed 20/500 images
+Processed 40/500 images
+Processed 60/500 images
+Processed 80/500 images
+Processed 100/500 images
+Processed 120/500 images
+Processed 140/500 images
+Processed 160/500 images
+Processed 180/500 images
+Processed 200/500 images
+Processed 220/500 images
+Processed 240/500 images
+Processed 260/500 images
+Processed 280/500 images
+Processed 300/500 images
+Processed 320/500 images
+Processed 340/500 images
+Processed 360/500 images
+Processed 380/500 images
+Processed 400/500 images
+Processed 420/500 images
+Processed 440/500 images
+Processed 460/500 images
+Processed 480/500 images
+Processed 500/500 images
+
+========== CLEAN500 ABLATION COMPLETE ==========
+Images: 500
+Rows: 17500
+Expected rows: 17500
+Output: outputs/revision_202610/ablation_clean500/rho_vote_ablation.csv
+PASS: row count verified

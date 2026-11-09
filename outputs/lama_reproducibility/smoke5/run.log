@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "$WAM_ROOT/outputs/revision_202610/lama_object_inpainting_smoke5_20261103/run_lama_object_inpainting_smoke5.py", line 13, in <module>
+    from notebooks.inference_utils import load_model_from_checkpoint
+ModuleNotFoundError: No module named 'notebooks'

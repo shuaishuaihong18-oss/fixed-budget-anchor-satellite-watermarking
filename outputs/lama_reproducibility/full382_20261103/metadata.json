@@ -1,0 +1,24 @@
+{
+  "experiment": "LaMa semantic object inpainting",
+  "n_images": 382,
+  "n_strategies": 6,
+  "n_records": 2292,
+  "seed": 3,
+  "geometry_seed_rule": "3 + eligible_image_index",
+  "payload_bits": 32,
+  "budget": 0.2,
+  "K": 4,
+  "anchor_ratio": 0.4,
+  "mask_area_range": [
+    0.03,
+    0.3
+  ],
+  "object_selection": "largest eligible COCO instance per image",
+  "object_selection_uses_watermark_results": false,
+  "detector": "original plus proposed voting",
+  "smoke5_reproduced_rows": 30,
+  "WAM_sha256": "90ef232384e023bd63245eb0c131abd69d2afc7b8f17a71ccedceb542bf009e2",
+  "LaMa_sha256": "7ba7aa7ac37a4d41fdbbeba3a2af7ead18058552997e3a3cd1a3b2210c9e6b4c",
+  "script_sha256": "6fa5a2fcae592c0cf2cceeefb308211595f3d0cb4c476d2cb9d8f34c11a95fb9",
+  "result_sha256": "767fad4a1f385607867ab77dbc4160d6e34d003260e08079ecd30a88d31da24b"
+}

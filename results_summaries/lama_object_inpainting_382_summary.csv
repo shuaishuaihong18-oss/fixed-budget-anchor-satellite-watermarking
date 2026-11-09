@@ -1,0 +1,7 @@
+strategy,n_images,clean_voting_bitacc,attacked_voting_bitacc,clean_voting_recovery31,attacked_voting_recovery31,delta_voting_bitacc,delta_voting_recovery31
+single,382,0.9708,0.94069,0.84031,0.7199,-0.0301,-0.12042
+single_random,382,0.9676,0.93742,0.81937,0.71466,-0.03019,-0.10471
+random,382,0.9699,0.95296,0.81675,0.73037,-0.01693,-0.08639
+texture,382,0.98086,0.96278,0.85602,0.79581,-0.01808,-0.06021
+wam_random_mask,382,0.96842,0.95705,0.78796,0.74607,-0.01137,-0.04188
+hybrid,382,0.96834,0.94953,0.8089,0.69372,-0.01882,-0.11518

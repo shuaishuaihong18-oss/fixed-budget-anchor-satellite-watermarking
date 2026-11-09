@@ -1,0 +1,103 @@
+
+========== DEGRADATION SUMMARY ==========
+           metric        strategy  mean_degradation  ci95_low  ci95_high
+  Original BitAcc          single          -0.03248  -0.04180   -0.02430
+  Original BitAcc   single_random          -0.03068  -0.03894   -0.02307
+  Original BitAcc          random          -0.01865  -0.02421   -0.01350
+  Original BitAcc         texture          -0.01734  -0.02315   -0.01211
+  Original BitAcc wam_random_mask          -0.01055  -0.01513   -0.00622
+  Original BitAcc          hybrid          -0.01775  -0.02389   -0.01227
+    Voting BitAcc          single          -0.03010  -0.03894   -0.02201
+    Voting BitAcc   single_random          -0.03019  -0.03878   -0.02225
+    Voting BitAcc          random          -0.01693  -0.02192   -0.01219
+    Voting BitAcc         texture          -0.01808  -0.02413   -0.01268
+    Voting BitAcc wam_random_mask          -0.01137  -0.01587   -0.00720
+    Voting BitAcc          hybrid          -0.01882  -0.02438   -0.01342
+Original Recovery          single          -0.13613  -0.17539   -0.09948
+Original Recovery   single_random          -0.12042  -0.15445   -0.08901
+Original Recovery          random          -0.10471  -0.13613   -0.07330
+Original Recovery         texture          -0.07068  -0.10471   -0.03927
+Original Recovery wam_random_mask          -0.06021  -0.09162   -0.02880
+Original Recovery          hybrid          -0.08377  -0.12042   -0.04974
+  Voting Recovery          single          -0.12042  -0.15452   -0.08377
+  Voting Recovery   single_random          -0.10471  -0.14136   -0.07068
+  Voting Recovery          random          -0.08639  -0.12042   -0.05497
+  Voting Recovery         texture          -0.06021  -0.09162   -0.02880
+  Voting Recovery wam_random_mask          -0.04188  -0.07330   -0.01309
+  Voting Recovery          hybrid          -0.11518  -0.15183   -0.07853
+
+========== FRIEDMAN ON DEGRADATION ==========
+           metric  friedman_statistic    p_raw   p_holm
+  Original BitAcc           31.012231 0.000009 0.000037
+    Voting BitAcc           13.243855 0.021198 0.021198
+Original Recovery           17.315687 0.003938 0.007877
+  Voting Recovery           19.734128 0.001402 0.004205
+
+========== PAIRED POST-HOC ==========
+           metric      strategy_A      strategy_B  mean_delta_difference_A_minus_B  ci95_low  ci95_high  wilcoxon_stat    p_raw   p_holm
+  Original BitAcc   single_random wam_random_mask                        -0.020124 -0.028796  -0.011778        15451.5 0.000004 0.000225
+  Original BitAcc          single wam_random_mask                        -0.021924 -0.031005  -0.013498        16616.5 0.000019 0.001149
+  Original BitAcc          single         texture                        -0.015134 -0.023478  -0.007363        17200.0 0.000436 0.025305
+  Original BitAcc          single          hybrid                        -0.014725 -0.022251  -0.007688        18243.0 0.000702 0.039297
+  Original BitAcc   single_random          hybrid                        -0.012925 -0.020697  -0.005234        17881.5 0.002242 0.118820
+  Original BitAcc          random wam_random_mask                        -0.008099 -0.014398  -0.002209        18884.5 0.004289 0.210173
+  Original BitAcc   single_random         texture                        -0.013334 -0.021515  -0.005563        18920.5 0.011891 0.535109
+  Original BitAcc          single   single_random                        -0.001800 -0.011619   0.007772        24198.5 0.654815 1.000000
+  Original BitAcc          single          random                        -0.013825 -0.022006  -0.006217        21749.0 0.089435 1.000000
+  Original BitAcc   single_random          random                        -0.012026 -0.020452  -0.004254        21586.0 0.116402 1.000000
+  Original BitAcc          random         texture                        -0.001309 -0.007199   0.004581        20668.5 0.253479 1.000000
+  Original BitAcc          random          hybrid                        -0.000900 -0.005972   0.004090        21383.0 0.694888 1.000000
+  Original BitAcc         texture wam_random_mask                        -0.006790 -0.012925  -0.000654        19796.5 0.096703 1.000000
+  Original BitAcc         texture          hybrid                         0.000409 -0.005890   0.006299        23133.0 0.885082 1.000000
+  Original BitAcc wam_random_mask          hybrid                         0.007199  0.000982   0.014071        23208.5 0.428815 1.000000
+Original Recovery          single wam_random_mask                        -0.075916 -0.120419  -0.028796         8589.5 0.001143 0.062870
+Original Recovery   single_random wam_random_mask                        -0.060209 -0.102094  -0.018325         7690.0 0.003801 0.190050
+Original Recovery          single         texture                        -0.065445 -0.109948  -0.020942         9261.0 0.008326 0.382986
+Original Recovery          single          hybrid                        -0.052356 -0.096859  -0.010471         8687.5 0.021686 0.922509
+Original Recovery          single   single_random                        -0.015707 -0.062827   0.028796        11750.0 0.486828 1.000000
+Original Recovery          single          random                        -0.031414 -0.075916   0.013089        10077.5 0.182144 1.000000
+Original Recovery   single_random          random                        -0.015707 -0.057592   0.028796        10168.0 0.392313 1.000000
+Original Recovery   single_random         texture                        -0.049738 -0.094241  -0.005236         9342.0 0.033143 1.000000
+Original Recovery   single_random          hybrid                        -0.036649 -0.081152   0.005236         9730.0 0.115351 1.000000
+Original Recovery          random         texture                        -0.034031 -0.073298   0.007853         8775.0 0.125291 1.000000
+Original Recovery          random wam_random_mask                        -0.044503 -0.089005   0.000000         9369.0 0.068119 1.000000
+Original Recovery          random          hybrid                        -0.020942 -0.062827   0.018325         8512.0 0.286462 1.000000
+Original Recovery         texture wam_random_mask                        -0.010471 -0.052356   0.031479        10199.5 0.468486 1.000000
+Original Recovery         texture          hybrid                         0.013089 -0.028796   0.054974        11136.0 0.547221 1.000000
+Original Recovery wam_random_mask          hybrid                         0.023560 -0.020942   0.068063        11385.0 0.346698 1.000000
+    Voting BitAcc          single wam_random_mask                        -0.018734 -0.026998  -0.010553        17450.5 0.001506 0.081335
+    Voting BitAcc   single_random wam_random_mask                        -0.018815 -0.028223  -0.010471        18574.5 0.003614 0.184289
+    Voting BitAcc          single         texture                        -0.012026 -0.020208  -0.004336        19015.5 0.021454 0.922509
+    Voting BitAcc          single   single_random                         0.000082 -0.009571   0.009819        23527.0 0.861001 1.000000
+    Voting BitAcc          single          random                        -0.013171 -0.021190  -0.005643        21191.5 0.067845 1.000000
+    Voting BitAcc          single          hybrid                        -0.011289 -0.019470  -0.003681        19544.0 0.028513 1.000000
+    Voting BitAcc   single_random          random                        -0.013253 -0.021351  -0.005563        20621.0 0.081668 1.000000
+    Voting BitAcc   single_random         texture                        -0.012107 -0.020535  -0.003599        19144.0 0.051585 1.000000
+    Voting BitAcc   single_random          hybrid                        -0.011371 -0.019308  -0.003681        19098.0 0.072829 1.000000
+    Voting BitAcc          random         texture                         0.001145 -0.004745   0.007608        22765.0 0.735846 1.000000
+    Voting BitAcc          random wam_random_mask                        -0.005563 -0.010962  -0.000409        20672.0 0.254202 1.000000
+    Voting BitAcc          random          hybrid                         0.001882 -0.002781   0.006545        22728.5 0.677625 1.000000
+    Voting BitAcc         texture wam_random_mask                        -0.006708 -0.012927  -0.001145        20449.0 0.281285 1.000000
+    Voting BitAcc         texture          hybrid                         0.000736 -0.005890   0.007281        21539.0 0.205654 1.000000
+    Voting BitAcc wam_random_mask          hybrid                         0.007444  0.001882   0.013253        21571.5 0.366243 1.000000
+  Voting Recovery          single wam_random_mask                        -0.078534 -0.123037  -0.034031         7616.0 0.000507 0.028923
+  Voting Recovery wam_random_mask          hybrid                         0.073298  0.026178   0.120419         8587.5 0.002712 0.141043
+  Voting Recovery   single_random wam_random_mask                        -0.062827 -0.109948  -0.018325         8004.0 0.005635 0.270470
+  Voting Recovery          single         texture                        -0.060209 -0.107330  -0.013089         8351.0 0.006665 0.313278
+  Voting Recovery         texture          hybrid                         0.054974  0.010471   0.099476         9947.0 0.018143 0.798297
+  Voting Recovery          single   single_random                        -0.015707 -0.060209   0.028796        11434.5 0.545423 1.000000
+  Voting Recovery          single          random                        -0.034031 -0.075916   0.007853         9430.0 0.092304 1.000000
+  Voting Recovery          single          hybrid                        -0.005236 -0.047186   0.036649        11185.0 0.806111 1.000000
+  Voting Recovery   single_random          random                        -0.018325 -0.062827   0.026178        10791.5 0.400817 1.000000
+  Voting Recovery   single_random         texture                        -0.044503 -0.091623   0.002618        10944.0 0.087572 1.000000
+  Voting Recovery   single_random          hybrid                         0.010471 -0.034031   0.052356        10521.0 0.475785 1.000000
+  Voting Recovery          random         texture                        -0.026178 -0.068063   0.015707        10106.5 0.225253 1.000000
+  Voting Recovery          random wam_random_mask                        -0.044503 -0.089071  -0.002618         9048.0 0.064242 1.000000
+  Voting Recovery          random          hybrid                         0.028796 -0.013089   0.070681         8805.5 0.160248 1.000000
+  Voting Recovery         texture wam_random_mask                        -0.018325 -0.060209   0.023560        10150.0 0.447079 1.000000
+
+========== OUTPUT ==========
+Images: 382
+Rows: 2292
+Pairwise comparisons: 60
+PASS

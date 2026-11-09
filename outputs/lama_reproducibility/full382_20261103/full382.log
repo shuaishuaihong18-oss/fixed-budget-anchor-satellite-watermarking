@@ -1,0 +1,64 @@
+Device: cuda
+loading annotations into memory...
+Done (t=0.47s)
+creating index...
+index created!
+Eligible images: 382
+loading annotations into memory...
+Done (t=0.58s)
+creating index...
+index created!
+making attention of type 'vanilla' with 64 in_channels
+Working with z of shape (1, 68, 32, 32) = 69632 dimensions.
+making attention of type 'vanilla' with 64 in_channels
+Model loaded successfully from $WAM_ROOT/checkpoints/wam_mit.pth
+{'embedder_config': 'configs/embedder.yaml', 'augmentation_config': 'configs/all_augs_multi_wm.yaml', 'extractor_config': 'configs/extractor.yaml', 'attenuation_config': 'configs/attenuation.yaml', 'embedder_model': 'vae_small', 'extractor_model': 'sam_base', 'nbits': 32, 'img_size': 256, 'img_size_extractor': 256, 'attenuation': 'jnd_1_3_blue', 'scaling_w': 2.0, 'scaling_w_schedule': None, 'scaling_i': 1.0, 'roll_probability': 0.2, 'multiple_w': 1.0, 'nb_wm_eval': 5, 'optimizer': 'AdamW,lr=1e-4', 'optimizer_d': None, 'scheduler': 'CosineLRScheduler,lr_min=1e-6,t_initial=100,warmup_lr_init=1e-6,warmup_t=5', 'epochs': 200, 'batch_size': 8, 'batch_size_eval': 16, 'temperature': 1.0, 'workers': 8, 'to_freeze_embedder': None, 'lambda_w': 1.0, 'lambda_w2': 6.0, 'lambda_i': 0.0, 'lambda_d': 0.0, 'balanced': True, 'total_gnorm': 0.0, 'perceptual_loss': 'none', 'disc_start': 0, 'disc_num_layers': 2, 'only_eval': False, 'eval_freq': 5, 'saveimg_freq': 5, 'saveckpt_freq': 50, 'seed': 42, 'debug_slurm': False, 'local_rank': 0, 'master_port': 18482, 'is_slurm_job': True, 'n_nodes': 1, 'node_id': 0, 'global_rank': 0, 'world_size': 8, 'n_gpu_per_node': 8, 'is_master': True, 'multi_node': False, 'distributed': True}
+Processed 10/382; rows=60
+Processed 20/382; rows=120
+Processed 30/382; rows=180
+Processed 40/382; rows=240
+Processed 50/382; rows=300
+Processed 60/382; rows=360
+Processed 70/382; rows=420
+Processed 80/382; rows=480
+Processed 90/382; rows=540
+Processed 100/382; rows=600
+Processed 110/382; rows=660
+Processed 120/382; rows=720
+Processed 130/382; rows=780
+Processed 140/382; rows=840
+Processed 150/382; rows=900
+Processed 160/382; rows=960
+Processed 170/382; rows=1020
+Processed 180/382; rows=1080
+Processed 190/382; rows=1140
+Processed 200/382; rows=1200
+Processed 210/382; rows=1260
+Processed 220/382; rows=1320
+Processed 230/382; rows=1380
+Processed 240/382; rows=1440
+Processed 250/382; rows=1500
+Processed 260/382; rows=1560
+Processed 270/382; rows=1620
+Processed 280/382; rows=1680
+Processed 290/382; rows=1740
+Processed 300/382; rows=1800
+Processed 310/382; rows=1860
+Processed 320/382; rows=1920
+Processed 330/382; rows=1980
+Processed 340/382; rows=2040
+Processed 350/382; rows=2100
+Processed 360/382; rows=2160
+Processed 370/382; rows=2220
+Processed 380/382; rows=2280
+Processed 382/382; rows=2292
+======================================================================
+FULL LAMA EXPERIMENT COMPLETE
+Images: 382
+Rows: 2292 / 2292
+Smoke5 reproduced: 30 /30
+Missing primary metrics: 0
+Duplicate image-strategy keys: 0
+Output: $WAM_ROOT/outputs/revision_202610/lama_object_inpainting_full382_20261103/lama_object_inpainting_382.csv
+Metadata: $WAM_ROOT/outputs/revision_202610/lama_object_inpainting_full382_20261103/metadata.json
+PASS

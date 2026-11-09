@@ -1,0 +1,69 @@
+Loading frozen WAM model...
+making attention of type 'vanilla' with 64 in_channels
+Working with z of shape (1, 68, 32, 32) = 69632 dimensions.
+making attention of type 'vanilla' with 64 in_channels
+Model loaded successfully from checkpoints/wam_mit.pth
+{'embedder_config': 'configs/embedder.yaml', 'augmentation_config': 'configs/all_augs_multi_wm.yaml', 'extractor_config': 'configs/extractor.yaml', 'attenuation_config': 'configs/attenuation.yaml', 'embedder_model': 'vae_small', 'extractor_model': 'sam_base', 'nbits': 32, 'img_size': 256, 'img_size_extractor': 256, 'attenuation': 'jnd_1_3_blue', 'scaling_w': 2.0, 'scaling_w_schedule': None, 'scaling_i': 1.0, 'roll_probability': 0.2, 'multiple_w': 1.0, 'nb_wm_eval': 5, 'optimizer': 'AdamW,lr=1e-4', 'optimizer_d': None, 'scheduler': 'CosineLRScheduler,lr_min=1e-6,t_initial=100,warmup_lr_init=1e-6,warmup_t=5', 'epochs': 200, 'batch_size': 8, 'batch_size_eval': 16, 'temperature': 1.0, 'workers': 8, 'to_freeze_embedder': None, 'lambda_w': 1.0, 'lambda_w2': 6.0, 'lambda_i': 0.0, 'lambda_d': 0.0, 'balanced': True, 'total_gnorm': 0.0, 'perceptual_loss': 'none', 'disc_start': 0, 'disc_num_layers': 2, 'only_eval': False, 'eval_freq': 5, 'saveimg_freq': 5, 'saveckpt_freq': 50, 'seed': 42, 'debug_slurm': False, 'local_rank': 0, 'master_port': 18482, 'is_slurm_job': True, 'n_nodes': 1, 'node_id': 0, 'global_rank': 0, 'world_size': 8, 'n_gpu_per_node': 8, 'is_master': True, 'multi_node': False, 'distributed': True}
+Images: 100
+Strategies: ['single', 'single_random', 'random', 'texture', 'wam_random_mask', 'hybrid']
+Attacks: ['none', 'erase40', 'randomcrop50', 'cornercrop50', 'splicing20']
+Processed 5/100 images
+Processed 10/100 images
+Processed 15/100 images
+Processed 20/100 images
+Processed 25/100 images
+Processed 30/100 images
+Processed 35/100 images
+Processed 40/100 images
+Processed 45/100 images
+Processed 50/100 images
+Processed 55/100 images
+Processed 60/100 images
+Processed 65/100 images
+Processed 70/100 images
+Processed 75/100 images
+Processed 80/100 images
+Processed 85/100 images
+Processed 90/100 images
+Processed 95/100 images
+Processed 100/100 images
+
+========== AGGREGATE RESULTS ==========
+full_wam_reference     none     n=100 area=1.0000 orig_BitAcc=0.9969 vote_BitAcc=0.9972 orig_R31=0.9800 vote_R31=0.9900
+full_wam_reference     erase40  n=100 area=1.0000 orig_BitAcc=0.9956 vote_BitAcc=0.9962 orig_R31=0.9700 vote_R31=0.9800
+full_wam_reference     randomcrop50 n=100 area=1.0000 orig_BitAcc=0.9475 vote_BitAcc=0.9531 orig_R31=0.7800 vote_R31=0.7600
+full_wam_reference     cornercrop50 n=100 area=1.0000 orig_BitAcc=0.9497 vote_BitAcc=0.9534 orig_R31=0.7700 vote_R31=0.7700
+full_wam_reference     splicing20 n=100 area=1.0000 orig_BitAcc=0.9953 vote_BitAcc=0.9950 orig_R31=0.9600 vote_R31=0.9600
+single                 none     n=100 area=0.1996 orig_BitAcc=0.9934 vote_BitAcc=0.9938 orig_R31=0.9500 vote_R31=0.9500
+single                 erase40  n=100 area=0.1996 orig_BitAcc=0.7234 vote_BitAcc=0.7425 orig_R31=0.3200 vote_R31=0.3400
+single                 randomcrop50 n=100 area=0.1996 orig_BitAcc=0.9294 vote_BitAcc=0.9337 orig_R31=0.6800 vote_R31=0.6700
+single                 cornercrop50 n=100 area=0.1996 orig_BitAcc=0.8738 vote_BitAcc=0.8784 orig_R31=0.5100 vote_R31=0.5200
+single                 splicing20 n=100 area=0.1996 orig_BitAcc=0.9769 vote_BitAcc=0.9753 orig_R31=0.8800 vote_R31=0.8500
+single_random          none     n=100 area=0.1996 orig_BitAcc=0.9953 vote_BitAcc=0.9966 orig_R31=0.9600 vote_R31=0.9700
+single_random          erase40  n=100 area=0.1996 orig_BitAcc=0.8584 vote_BitAcc=0.8728 orig_R31=0.6100 vote_R31=0.6100
+single_random          randomcrop50 n=100 area=0.1996 orig_BitAcc=0.8869 vote_BitAcc=0.8847 orig_R31=0.5500 vote_R31=0.5400
+single_random          cornercrop50 n=100 area=0.1996 orig_BitAcc=0.7550 vote_BitAcc=0.7644 orig_R31=0.3600 vote_R31=0.3500
+single_random          splicing20 n=100 area=0.1996 orig_BitAcc=0.8878 vote_BitAcc=0.8872 orig_R31=0.6500 vote_R31=0.6800
+random                 none     n=100 area=0.1987 orig_BitAcc=0.9934 vote_BitAcc=0.9931 orig_R31=0.9500 vote_R31=0.9500
+random                 erase40  n=100 area=0.1987 orig_BitAcc=0.9728 vote_BitAcc=0.9762 orig_R31=0.8600 vote_R31=0.8800
+random                 randomcrop50 n=100 area=0.1987 orig_BitAcc=0.8684 vote_BitAcc=0.8841 orig_R31=0.4200 vote_R31=0.4600
+random                 cornercrop50 n=100 area=0.1987 orig_BitAcc=0.8187 vote_BitAcc=0.8313 orig_R31=0.3400 vote_R31=0.3500
+random                 splicing20 n=100 area=0.1987 orig_BitAcc=0.9350 vote_BitAcc=0.9372 orig_R31=0.7200 vote_R31=0.7400
+texture                none     n=100 area=0.1989 orig_BitAcc=0.9925 vote_BitAcc=0.9934 orig_R31=0.9500 vote_R31=0.9700
+texture                erase40  n=100 area=0.1989 orig_BitAcc=0.9391 vote_BitAcc=0.9497 orig_R31=0.7600 vote_R31=0.7700
+texture                randomcrop50 n=100 area=0.1989 orig_BitAcc=0.8766 vote_BitAcc=0.8812 orig_R31=0.5200 vote_R31=0.5000
+texture                cornercrop50 n=100 area=0.1989 orig_BitAcc=0.7978 vote_BitAcc=0.8003 orig_R31=0.3200 vote_R31=0.3300
+texture                splicing20 n=100 area=0.1989 orig_BitAcc=0.9428 vote_BitAcc=0.9369 orig_R31=0.7300 vote_R31=0.7400
+wam_random_mask        none     n=100 area=0.2031 orig_BitAcc=0.9909 vote_BitAcc=0.9909 orig_R31=0.9600 vote_R31=0.9600
+wam_random_mask        erase40  n=100 area=0.2031 orig_BitAcc=0.9712 vote_BitAcc=0.9738 orig_R31=0.8700 vote_R31=0.8800
+wam_random_mask        randomcrop50 n=100 area=0.2031 orig_BitAcc=0.8428 vote_BitAcc=0.8516 orig_R31=0.4000 vote_R31=0.3800
+wam_random_mask        cornercrop50 n=100 area=0.2031 orig_BitAcc=0.8275 vote_BitAcc=0.8331 orig_R31=0.3000 vote_R31=0.3400
+wam_random_mask        splicing20 n=100 area=0.2031 orig_BitAcc=0.9172 vote_BitAcc=0.9322 orig_R31=0.6200 vote_R31=0.6500
+hybrid                 none     n=100 area=0.1990 orig_BitAcc=0.9919 vote_BitAcc=0.9928 orig_R31=0.9400 vote_R31=0.9500
+hybrid                 erase40  n=100 area=0.1990 orig_BitAcc=0.9541 vote_BitAcc=0.9597 orig_R31=0.7900 vote_R31=0.8200
+hybrid                 randomcrop50 n=100 area=0.1990 orig_BitAcc=0.9019 vote_BitAcc=0.9109 orig_R31=0.5600 vote_R31=0.5800
+hybrid                 cornercrop50 n=100 area=0.1990 orig_BitAcc=0.8409 vote_BitAcc=0.8494 orig_R31=0.4100 vote_R31=0.4000
+hybrid                 splicing20 n=100 area=0.1990 orig_BitAcc=0.9753 vote_BitAcc=0.9728 orig_R31=0.8300 vote_R31=0.8300
+
+Saved: outputs/revision_202610/raw/paired100_allattacks/results.csv
+Rows: 3500 Expected: 3500

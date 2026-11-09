@@ -1,0 +1,18 @@
+{
+  "experiment": "matched_clean_control_for_lama",
+  "images": 382,
+  "rows": 2292,
+  "strategies": [
+    "single",
+    "single_random",
+    "random",
+    "texture",
+    "wam_random_mask",
+    "hybrid"
+  ],
+  "budget": 0.2,
+  "seed": 3,
+  "geometry_match_tolerance": 1e-06,
+  "geometry_verified": true,
+  "WAM_sha256": "90ef232384e023bd63245eb0c131abd69d2afc7b8f17a71ccedceb542bf009e2"
+}

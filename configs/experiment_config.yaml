@@ -1,0 +1,17 @@
+image_size: 256
+payload_bits: 32
+watermarked_area_budget: 0.20
+num_regions: 4
+anchor_ratio: 0.40
+max_iou: 0.03
+placement_seed: 3
+candidate_grid: 8
+cell_mean_detection_threshold: 0.08
+global_fallback_mask_threshold: 0.50
+region_vote: evidence_and_margin
+attacks:
+  - erase40
+  - randomcrop50
+  - cornercrop50
+  - retain20
+note: retain20 is the implementation label splicing20 and uses same-source unwatermarked pixels.

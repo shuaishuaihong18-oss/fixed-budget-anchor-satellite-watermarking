@@ -1,0 +1,32 @@
+{
+  "experiment": "clean_image_negative_control",
+  "n_images": 500,
+  "checkpoint": "$WAM_ROOT/checkpoints/wam_mit.pth",
+  "checkpoint_sha256": "90ef232384e023bd63245eb0c131abd69d2afc7b8f17a71ccedceb542bf009e2",
+  "settings": {
+    "grid": 8,
+    "min_cell_score": 0.08,
+    "mask_threshold": 0.5,
+    "min_pixels": 16,
+    "vote_mode": "proposed"
+  },
+  "exact_match_count": 0,
+  "exact_match_rate": 0.0,
+  "exact_match_wilson_ci95": [
+    4.336808689942018e-19,
+    0.007624340461552241
+  ],
+  "recovery31_count": 0,
+  "recovery31_rate": 0.0,
+  "recovery31_wilson_ci95": [
+    4.336808689942018e-19,
+    0.007624340461552241
+  ],
+  "mean_bitacc_vs_assigned_message": 0.4996875,
+  "mean_region_count": 1.444,
+  "zero_region_count": 362,
+  "mean_mask_probability": 0.00782583801150031,
+  "mean_mask_fraction_ge_0_5": 0.002237030029296875,
+  "interpretation": "Negative-control agreement with the per-image assigned message. Recovery31 means at most one bit error. These are not a generic system-level false-positive rate because the detector has no independent watermark-acceptance decision.",
+  "raw_results": "$WAM_ROOT/outputs/revision_202610/false_positive_audit_20261029/clean_negative_control_results.csv"
+}

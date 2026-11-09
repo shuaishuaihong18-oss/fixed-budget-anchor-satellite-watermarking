@@ -1,0 +1,46 @@
+========================================================================
+RUNTIME COST AUDIT
+========================================================================
+Device: NVIDIA GeForce RTX 4090
+Images: 500
+Attacks: ['none', 'erase40', 'randomcrop50', 'cornercrop50', 'splicing20']
+Geometry IoU: 0.03
+Geometry rows: 2500
+Image mapping: PASS
+Region counts and bounds: PASS
+Configured IoU constraints: PASS
+making attention of type 'vanilla' with 64 in_channels
+Working with z of shape (1, 68, 32, 32) = 69632 dimensions.
+making attention of type 'vanilla' with 64 in_channels
+Model loaded successfully from $WAM_ROOT/checkpoints/wam_mit.pth
+{'embedder_config': 'configs/embedder.yaml', 'augmentation_config': 'configs/all_augs_multi_wm.yaml', 'extractor_config': 'configs/extractor.yaml', 'attenuation_config': 'configs/attenuation.yaml', 'embedder_model': 'vae_small', 'extractor_model': 'sam_base', 'nbits': 32, 'img_size': 256, 'img_size_extractor': 256, 'attenuation': 'jnd_1_3_blue', 'scaling_w': 2.0, 'scaling_w_schedule': None, 'scaling_i': 1.0, 'roll_probability': 0.2, 'multiple_w': 1.0, 'nb_wm_eval': 5, 'optimizer': 'AdamW,lr=1e-4', 'optimizer_d': None, 'scheduler': 'CosineLRScheduler,lr_min=1e-6,t_initial=100,warmup_lr_init=1e-6,warmup_t=5', 'epochs': 200, 'batch_size': 8, 'batch_size_eval': 16, 'temperature': 1.0, 'workers': 8, 'to_freeze_embedder': None, 'lambda_w': 1.0, 'lambda_w2': 6.0, 'lambda_i': 0.0, 'lambda_d': 0.0, 'balanced': True, 'total_gnorm': 0.0, 'perceptual_loss': 'none', 'disc_start': 0, 'disc_num_layers': 2, 'only_eval': False, 'eval_freq': 5, 'saveimg_freq': 5, 'saveckpt_freq': 50, 'seed': 42, 'debug_slurm': False, 'local_rank': 0, 'master_port': 18482, 'is_slurm_job': True, 'n_nodes': 1, 'node_id': 0, 'global_rank': 0, 'world_size': 8, 'n_gpu_per_node': 8, 'is_master': True, 'multi_node': False, 'distributed': True}
+Processed 25/500 images
+Processed 50/500 images
+Processed 75/500 images
+Processed 100/500 images
+Processed 125/500 images
+Processed 150/500 images
+Processed 175/500 images
+Processed 200/500 images
+Processed 225/500 images
+Processed 250/500 images
+Processed 275/500 images
+Processed 300/500 images
+Processed 325/500 images
+Processed 350/500 images
+Processed 375/500 images
+Processed 400/500 images
+Processed 425/500 images
+Processed 450/500 images
+Processed 475/500 images
+Processed 500/500 images
+
+========== FINAL INTEGRITY ==========
+Rows: 2500 / 2500
+Geometry matches: 500 / 500
+Baseline metric mismatches: 0
+Maximum baseline metric difference: 0.0
+Raw results: $WAM_ROOT/outputs/revision_202610/runtime_cost_audit_20261029/runtime_cost_results.csv
+Summary: $WAM_ROOT/outputs/revision_202610/runtime_cost_audit_20261029/runtime_cost_summary_by_attack.csv
+Metadata: $WAM_ROOT/outputs/revision_202610/runtime_cost_audit_20261029/runtime_cost_metadata.json
+PASS: All measured detector metrics reproduce the main results.

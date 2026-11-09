@@ -1,0 +1,77 @@
+========================================================================
+DETECTION PARAMETER SENSITIVITY
+========================================================================
+Geometry rows: 2500
+Image mapping: PASS
+Region counts and bounds: PASS
+Configured IoU constraints: PASS
+Images: 500
+Attacks: ['none', 'erase40', 'randomcrop50', 'cornercrop50', 'splicing20']
+Configurations: [('grid4_score008', 4, 0.08), ('grid8_score008', 8, 0.08), ('grid16_score008', 16, 0.08), ('grid8_score004', 8, 0.04), ('grid8_score012', 8, 0.12)]
+Expected result rows: 12500
+Device: cuda
+Loading frozen WAM model...
+making attention of type 'vanilla' with 64 in_channels
+Working with z of shape (1, 68, 32, 32) = 69632 dimensions.
+making attention of type 'vanilla' with 64 in_channels
+Model loaded successfully from $WAM_ROOT/checkpoints/wam_mit.pth
+{'embedder_config': 'configs/embedder.yaml', 'augmentation_config': 'configs/all_augs_multi_wm.yaml', 'extractor_config': 'configs/extractor.yaml', 'attenuation_config': 'configs/attenuation.yaml', 'embedder_model': 'vae_small', 'extractor_model': 'sam_base', 'nbits': 32, 'img_size': 256, 'img_size_extractor': 256, 'attenuation': 'jnd_1_3_blue', 'scaling_w': 2.0, 'scaling_w_schedule': None, 'scaling_i': 1.0, 'roll_probability': 0.2, 'multiple_w': 1.0, 'nb_wm_eval': 5, 'optimizer': 'AdamW,lr=1e-4', 'optimizer_d': None, 'scheduler': 'CosineLRScheduler,lr_min=1e-6,t_initial=100,warmup_lr_init=1e-6,warmup_t=5', 'epochs': 200, 'batch_size': 8, 'batch_size_eval': 16, 'temperature': 1.0, 'workers': 8, 'to_freeze_embedder': None, 'lambda_w': 1.0, 'lambda_w2': 6.0, 'lambda_i': 0.0, 'lambda_d': 0.0, 'balanced': True, 'total_gnorm': 0.0, 'perceptual_loss': 'none', 'disc_start': 0, 'disc_num_layers': 2, 'only_eval': False, 'eval_freq': 5, 'saveimg_freq': 5, 'saveckpt_freq': 50, 'seed': 42, 'debug_slurm': False, 'local_rank': 0, 'master_port': 18482, 'is_slurm_job': True, 'n_nodes': 1, 'node_id': 0, 'global_rank': 0, 'world_size': 8, 'n_gpu_per_node': 8, 'is_master': True, 'multi_node': False, 'distributed': True}
+Processed 10/500 images; rows=250
+Processed 20/500 images; rows=500
+Processed 30/500 images; rows=750
+Processed 40/500 images; rows=1000
+Processed 50/500 images; rows=1250
+Processed 60/500 images; rows=1500
+Processed 70/500 images; rows=1750
+Processed 80/500 images; rows=2000
+Processed 90/500 images; rows=2250
+Processed 100/500 images; rows=2500
+Processed 110/500 images; rows=2750
+Processed 120/500 images; rows=3000
+Processed 130/500 images; rows=3250
+Processed 140/500 images; rows=3500
+Processed 150/500 images; rows=3750
+Processed 160/500 images; rows=4000
+Processed 170/500 images; rows=4250
+Processed 180/500 images; rows=4500
+Processed 190/500 images; rows=4750
+Processed 200/500 images; rows=5000
+Processed 210/500 images; rows=5250
+Processed 220/500 images; rows=5500
+Processed 230/500 images; rows=5750
+Processed 240/500 images; rows=6000
+Processed 250/500 images; rows=6250
+Processed 260/500 images; rows=6500
+Processed 270/500 images; rows=6750
+Processed 280/500 images; rows=7000
+Processed 290/500 images; rows=7250
+Processed 300/500 images; rows=7500
+Processed 310/500 images; rows=7750
+Processed 320/500 images; rows=8000
+Processed 330/500 images; rows=8250
+Processed 340/500 images; rows=8500
+Processed 350/500 images; rows=8750
+Processed 360/500 images; rows=9000
+Processed 370/500 images; rows=9250
+Processed 380/500 images; rows=9500
+Processed 390/500 images; rows=9750
+Processed 400/500 images; rows=10000
+Processed 410/500 images; rows=10250
+Processed 420/500 images; rows=10500
+Processed 430/500 images; rows=10750
+Processed 440/500 images; rows=11000
+Processed 450/500 images; rows=11250
+Processed 460/500 images; rows=11500
+Processed 470/500 images; rows=11750
+Processed 480/500 images; rows=12000
+Processed 490/500 images; rows=12250
+Processed 500/500 images; rows=12500
+
+========== INTEGRITY CHECK ==========
+Rows written: 12500
+Expected rows: 12500
+Default baseline comparisons: 2500
+Maximum baseline differences: {'vote_bitacc': 0.0, 'vote_recovery31': 0.0}
+PASS: Default detector reproduces the Hybrid reference.
+Output: $WAM_ROOT/outputs/revision_202610/detection_param_sensitivity_20261028/detection_param_sensitivity_results.csv
+No existing experiment files were modified.

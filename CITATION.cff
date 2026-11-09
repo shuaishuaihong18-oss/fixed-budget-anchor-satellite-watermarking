@@ -1,0 +1,7 @@
+cff-version: 1.2.0
+message: "If you use this software or its accompanying research records, please cite the associated manuscript."
+title: "Reproducibility package for Fixed-Budget Anchor--Satellite Region Allocation for Robust Localized Image Watermarking"
+type: software
+version: 0.1.0
+date-released: 2026-11-09
+license: MIT

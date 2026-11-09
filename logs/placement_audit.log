@@ -1,0 +1,24 @@
+=================================================================
+PLACEMENT FALLBACK AUDIT
+=================================================================
+Images: 500
+Geometry matches: 500
+Complete layouts: 500
+
+========== RANDOM PLACEMENT ==========
+Mean random trials: 5.138
+Median random trials: 5.0
+Maximum random trials: 14
+Total rejected candidates: 1069
+Images with rejected candidates: 412
+
+========== FALLBACK ==========
+Fallback-triggered images: 0
+Fallback satellites added: 0
+Incomplete layouts: 0
+
+========== AREA ==========
+Mean actual area: 0.19723875
+
+Saved: outputs/revision_202610/placement_fallback_audit_20261029/placement_audit_500.csv
+AUDIT COMPLETE

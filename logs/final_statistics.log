@@ -1,0 +1,48 @@
+
+========== AUDIT: COCO500 ==========
+Rows: 17500
+Unique images: 500
+Methods: ['full_wam_reference', 'hybrid', 'random', 'single', 'single_random', 'texture', 'wam_random_mask']
+Attacks: ['cornercrop50', 'erase40', 'none', 'randomcrop50', 'splicing20']
+Image-method-attack grid: complete
+Shared 32-bit message per image: verified
+Area consistent across attacks: verified
+
+========== AUDIT: DIV2K100 ==========
+Rows: 3500
+Unique images: 100
+Methods: ['full_wam_reference', 'hybrid', 'random', 'single', 'single_random', 'texture', 'wam_random_mask']
+Attacks: ['cornercrop50', 'erase40', 'none', 'randomcrop50', 'splicing20']
+Image-method-attack grid: complete
+Shared 32-bit message per image: verified
+Area consistent across attacks: verified
+
+========== OVERALL ROBUSTNESS ==========
+COCO500    vote_bitacc        hybrid_vs_single             Hybrid=0.9351 Baseline=0.8979 Diff=+0.0373 CI95=[+0.0313, +0.0432] p=2.274e-25 Holm=4.548e-25
+COCO500    vote_bitacc        hybrid_vs_single_random      Hybrid=0.9351 Baseline=0.8587 Diff=+0.0765 CI95=[+0.0678, +0.0852] p=1.305e-44 Holm=6.527e-44
+COCO500    vote_bitacc        hybrid_vs_random             Hybrid=0.9351 Baseline=0.9112 Diff=+0.0239 CI95=[+0.0186, +0.0295] p=9.604e-17 Holm=9.604e-17
+COCO500    vote_bitacc        hybrid_vs_texture            Hybrid=0.9351 Baseline=0.8944 Diff=+0.0407 CI95=[+0.0337, +0.0477] p=1.153e-25 Holm=3.46e-25
+COCO500    vote_bitacc        hybrid_vs_wam_random_mask    Hybrid=0.9351 Baseline=0.9032 Diff=+0.0319 CI95=[+0.0261, +0.0376] p=2.335e-26 Holm=9.341e-26
+COCO500    vote_recovery31    hybrid_vs_single             Hybrid=0.7080 Baseline=0.6350 Diff=+0.0730 CI95=[+0.0520, +0.0935] p=4.464e-11 Holm=8.927e-11
+COCO500    vote_recovery31    hybrid_vs_single_random      Hybrid=0.7080 Baseline=0.5835 Diff=+0.1245 CI95=[+0.0995, +0.1490] p=8.278e-20 Holm=3.311e-19
+COCO500    vote_recovery31    hybrid_vs_random             Hybrid=0.7080 Baseline=0.6545 Diff=+0.0535 CI95=[+0.0340, +0.0730] p=7.644e-08 Holm=7.644e-08
+COCO500    vote_recovery31    hybrid_vs_texture            Hybrid=0.7080 Baseline=0.6110 Diff=+0.0970 CI95=[+0.0750, +0.1200] p=4.777e-15 Holm=1.433e-14
+COCO500    vote_recovery31    hybrid_vs_wam_random_mask    Hybrid=0.7080 Baseline=0.5790 Diff=+0.1290 CI95=[+0.1070, +0.1510] p=6.275e-24 Holm=3.137e-23
+DIV2K100   vote_bitacc        hybrid_vs_single             Hybrid=0.9232 Baseline=0.8825 Diff=+0.0407 CI95=[+0.0270, +0.0541] p=5.404e-07 Holm=2.162e-06
+DIV2K100   vote_bitacc        hybrid_vs_single_random      Hybrid=0.9232 Baseline=0.8523 Diff=+0.0709 CI95=[+0.0537, +0.0885] p=5.984e-11 Holm=2.992e-10
+DIV2K100   vote_bitacc        hybrid_vs_random             Hybrid=0.9232 Baseline=0.9072 Diff=+0.0160 CI95=[+0.0055, +0.0263] p=0.002542 Holm=0.002542
+DIV2K100   vote_bitacc        hybrid_vs_texture            Hybrid=0.9232 Baseline=0.8920 Diff=+0.0312 CI95=[+0.0154, +0.0481] p=0.0003112 Holm=0.0006224
+DIV2K100   vote_bitacc        hybrid_vs_wam_random_mask    Hybrid=0.9232 Baseline=0.8977 Diff=+0.0255 CI95=[+0.0125, +0.0388] p=0.000189 Holm=0.000567
+DIV2K100   vote_recovery31    hybrid_vs_single             Hybrid=0.6575 Baseline=0.5950 Diff=+0.0625 CI95=[+0.0175, +0.1075] p=0.006776 Holm=0.02033
+DIV2K100   vote_recovery31    hybrid_vs_single_random      Hybrid=0.6575 Baseline=0.5450 Diff=+0.1125 CI95=[+0.0675, +0.1575] p=1.959e-05 Holm=9.795e-05
+DIV2K100   vote_recovery31    hybrid_vs_random             Hybrid=0.6575 Baseline=0.6075 Diff=+0.0500 CI95=[+0.0100, +0.0900] p=0.01895 Holm=0.02859
+DIV2K100   vote_recovery31    hybrid_vs_texture            Hybrid=0.6575 Baseline=0.5850 Diff=+0.0725 CI95=[+0.0200, +0.1275] p=0.0143 Holm=0.02859
+DIV2K100   vote_recovery31    hybrid_vs_wam_random_mask    Hybrid=0.6575 Baseline=0.5625 Diff=+0.0950 CI95=[+0.0550, +0.1375] p=4.661e-05 Holm=0.0001864
+
+========== OUTPUT FILES ==========
+outputs/revision_202610/summary/final_descriptive_by_attack.csv
+outputs/revision_202610/summary/final_actual_area.csv
+outputs/revision_202610/summary/final_paired_overall.csv
+outputs/revision_202610/summary/final_paired_by_attack.csv
+
+STATISTICAL ANALYSIS COMPLETE

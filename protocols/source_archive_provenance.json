@@ -1,0 +1,27 @@
+{
+  "source_zip": {
+    "filename": "Fixed_Budget_Anchor__Satellite_Region_Allocation_for_Robust_Localized_Image_Watermarking__1_ (3).zip",
+    "sha256": "cfd0135d73cd017970daf1aa6dbe12cadf34072d53d0c89f7e4c715e63eb3208",
+    "bytes": 4783278
+  },
+  "evidence_archive": {
+    "filename": "revision_evidence_20261101.tar.gz",
+    "sha256": "23d201508caa65545001cdd0f01a07de89c23fb582a930a9f3dfa843b79fe6bc",
+    "bytes": 2268008
+  },
+  "lama_repro_bundle": {
+    "filename": "lama_repro_bundle_20261103 (1).tar(1).gz",
+    "sha256": "d7d358b7116cfeebbf687240cad0eb41662249c56c024381f52db06a6fdb547b",
+    "bytes": 41924702
+  },
+  "wam310_environment_original": {
+    "filename": "wam310_environment(1).yml",
+    "sha256": "103b319cd96a675394f834417544cc5b192e89af796c7c90babf7af89103c1aa",
+    "bytes": 3602
+  },
+  "wam310_environment_sanitized": {
+    "filename": "environment/wam310_environment.yml",
+    "sha256": "1fda0a3291d605092adbaf5b8b7445d0537165ec2ec4d1da151b4e6e34d84524",
+    "note": "The machine-specific prefix line was removed; package specifications otherwise retained."
+  }
+}

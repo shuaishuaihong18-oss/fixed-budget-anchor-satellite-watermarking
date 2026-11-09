@@ -1,0 +1,42 @@
+{
+  "experiment": "matched_attacked_anchor_satellite_component_removal",
+  "n_images": 500,
+  "rows": 20000,
+  "conditions": [
+    "hybrid_all",
+    "anchor_removed",
+    "remove_S1",
+    "remove_S2",
+    "remove_S3",
+    "remove_S1_S2",
+    "remove_S1_S3",
+    "remove_S2_S3",
+    "anchor_only",
+    "all_regions_removed"
+  ],
+  "attacks": [
+    "erase40",
+    "randomcrop50",
+    "cornercrop50",
+    "splicing20"
+  ],
+  "iou": 0.03,
+  "seed_rule": "SEED + image_index, shared across conditions per image",
+  "checkpoint": "$WAM_ROOT/checkpoints/wam_mit.pth",
+  "checkpoint_sha256": "90ef232384e023bd63245eb0c131abd69d2afc7b8f17a71ccedceb542bf009e2",
+  "baseline_reproduction": "PASS",
+  "baseline_max_abs_differences": {
+    "orig_bitacc": 0.0,
+    "vote_bitacc": 0.0,
+    "orig_recovery31": 0.0,
+    "vote_recovery31": 0.0,
+    "actual_area": 0.0
+  },
+  "paired_comparisons": 144,
+  "significant_after_global_holm144": 140,
+  "bootstrap_replicates": 5000,
+  "raw_results": "$WAM_ROOT/outputs/revision_202610/component_removal_attacks_20261030/component_removal_attacks_500.csv",
+  "condition_means": "$WAM_ROOT/outputs/revision_202610/component_removal_attacks_20261030/component_removal_attacks_500_condition_means.csv",
+  "paired_statistics": "$WAM_ROOT/outputs/revision_202610/component_removal_attacks_20261030/component_removal_attacks_500_paired_vs_hybrid.csv",
+  "interpretation_note": "Component removal also reduces retained watermark area; these are operational component-removal ablations, not area-controlled pure position effects."
+}

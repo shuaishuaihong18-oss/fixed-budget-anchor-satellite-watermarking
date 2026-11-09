@@ -1,0 +1,62 @@
+Geometry rows: 2500
+Image mapping: PASS
+Region counts and bounds: PASS
+Configured IoU constraints: PASS
+
+========== PRE-RUN AUDIT ==========
+Images to process: 500
+IoU thresholds: (0.0, 0.01, 0.03, 0.05, 0.1)
+Attacks: ['none', 'erase40', 'randomcrop50', 'cornercrop50', 'splicing20']
+Expected result rows: 12500
+The 0.03 condition will be checked against Hybrid.
+Device: cuda
+Loading frozen WAM model...
+making attention of type 'vanilla' with 64 in_channels
+Working with z of shape (1, 68, 32, 32) = 69632 dimensions.
+making attention of type 'vanilla' with 64 in_channels
+Model loaded successfully from $WAM_ROOT/checkpoints/wam_mit.pth
+{'embedder_config': 'configs/embedder.yaml', 'augmentation_config': 'configs/all_augs_multi_wm.yaml', 'extractor_config': 'configs/extractor.yaml', 'attenuation_config': 'configs/attenuation.yaml', 'embedder_model': 'vae_small', 'extractor_model': 'sam_base', 'nbits': 32, 'img_size': 256, 'img_size_extractor': 256, 'attenuation': 'jnd_1_3_blue', 'scaling_w': 2.0, 'scaling_w_schedule': None, 'scaling_i': 1.0, 'roll_probability': 0.2, 'multiple_w': 1.0, 'nb_wm_eval': 5, 'optimizer': 'AdamW,lr=1e-4', 'optimizer_d': None, 'scheduler': 'CosineLRScheduler,lr_min=1e-6,t_initial=100,warmup_lr_init=1e-6,warmup_t=5', 'epochs': 200, 'batch_size': 8, 'batch_size_eval': 16, 'temperature': 1.0, 'workers': 8, 'to_freeze_embedder': None, 'lambda_w': 1.0, 'lambda_w2': 6.0, 'lambda_i': 0.0, 'lambda_d': 0.0, 'balanced': True, 'total_gnorm': 0.0, 'perceptual_loss': 'none', 'disc_start': 0, 'disc_num_layers': 2, 'only_eval': False, 'eval_freq': 5, 'saveimg_freq': 5, 'saveckpt_freq': 50, 'seed': 42, 'debug_slurm': False, 'local_rank': 0, 'master_port': 18482, 'is_slurm_job': True, 'n_nodes': 1, 'node_id': 0, 'global_rank': 0, 'world_size': 8, 'n_gpu_per_node': 8, 'is_master': True, 'multi_node': False, 'distributed': True}
+Processed 25/500 images; rows=625
+Processed 50/500 images; rows=1250
+Processed 75/500 images; rows=1875
+Processed 100/500 images; rows=2500
+Processed 125/500 images; rows=3125
+Processed 150/500 images; rows=3750
+Processed 175/500 images; rows=4375
+Processed 200/500 images; rows=5000
+Processed 225/500 images; rows=5625
+Processed 250/500 images; rows=6250
+Processed 275/500 images; rows=6875
+Processed 300/500 images; rows=7500
+Processed 325/500 images; rows=8125
+Processed 350/500 images; rows=8750
+Processed 375/500 images; rows=9375
+Processed 400/500 images; rows=10000
+Processed 425/500 images; rows=10625
+Processed 450/500 images; rows=11250
+Processed 475/500 images; rows=11875
+Processed 500/500 images; rows=12500
+
+========== IOU SENSITIVITY COMPLETE ==========
+Images: 500
+Rows: 12500
+Expected rows: 12500
+Output: $WAM_ROOT/outputs/revision_202610/iou_sensitivity_full_20261028/iou_sensitivity_results.csv
+
+========== IOU=0.03 HYBRID AUDIT ==========
+actual_area: max_abs_diff=0.0000004994
+orig_bitacc: max_abs_diff=0.0000000000
+vote_bitacc: max_abs_diff=0.0000000000
+orig_recovery31: max_abs_diff=0.0000000000
+vote_recovery31: max_abs_diff=0.0000000000
+PASS: IoU=0.03 reproduces the Hybrid reference.
+
+========== FOUR-ATTACK DESCRIPTIVE MEANS ==========
+IoU=0.00 | area=0.197953 | orig_BitAcc=0.932125 | vote_BitAcc=0.935422 | orig_Recovery31=0.693500 | vote_Recovery31=0.706500
+IoU=0.01 | area=0.197862 | orig_BitAcc=0.932000 | vote_BitAcc=0.935750 | orig_Recovery31=0.694500 | vote_Recovery31=0.711000
+IoU=0.03 | area=0.197239 | orig_BitAcc=0.931063 | vote_BitAcc=0.935125 | orig_Recovery31=0.693000 | vote_Recovery31=0.708000
+IoU=0.05 | area=0.196540 | orig_BitAcc=0.930531 | vote_BitAcc=0.934375 | orig_Recovery31=0.689500 | vote_Recovery31=0.706000
+IoU=0.10 | area=0.194052 | orig_BitAcc=0.930391 | vote_BitAcc=0.934109 | orig_Recovery31=0.690500 | vote_Recovery31=0.705500
+
+PASS: Result keys are unique and all rows are present.
+Existing main experiment files were not modified.
