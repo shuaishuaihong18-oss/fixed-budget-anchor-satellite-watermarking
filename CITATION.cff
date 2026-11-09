@@ -5,3 +5,27 @@ type: software
 version: 0.1.0
 date-released: 2026-11-09
 license: MIT
+keywords:
+  - localized image watermarking
+  - fixed embedding budget
+  - anchor-satellite allocation
+  - watermark robustness
+  - regional decoding
+authors:
+  - family-names: Shuai
+    given-names: Hong
+    affiliation: "School of Big Data and Computer Science, Guizhou Normal University"
+    orcid: "https://orcid.org/0009-0003-2473-9563"
+  - family-names: Mo
+    given-names: Jinrong
+    affiliation: "School of Big Data and Computer Science, Guizhou Normal University"
+  - family-names: Wang
+    given-names: Yongrong
+    affiliation: "School of Big Data and Computer Science, Guizhou Normal University"
+  - family-names: Xiong
+    given-names: Ling
+    affiliation: "Beijing Language and Culture University"
+  - family-names: Chen
+    given-names: Yanli
+    affiliation: "School of Big Data and Computer Science, Guizhou Normal University"
+    orcid: "https://orcid.org/0000-0003-4452-5725"
