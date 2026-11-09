@@ -2,7 +2,7 @@
 
 ## Checks completed
 
-- Archive contains 155 files (source scripts, configurations, manifests, logs, raw records, summaries, and documentation).
+- The archive contains 156 files in total: 155 payload files plus `SHA256SUMS.txt`.
 - All 38 Python files parse successfully with Python's AST parser.
 - Text-file scan found no machine-specific absolute paths tied to the original Linux or macOS user directories.
 - Text-file scan found no matches for common GitHub personal-access-token, AWS access-key, private-key, or generic API-key patterns.
