@@ -23,5 +23,20 @@
     "filename": "environment/wam310_environment.yml",
     "sha256": "1fda0a3291d605092adbaf5b8b7445d0537165ec2ec4d1da151b4e6e34d84524",
     "note": "The machine-specific prefix line was removed; package specifications otherwise retained."
+  },
+  "wam310_environment_release": {
+    "filename": "environment/wam310_environment.yml",
+    "sha256": "8a83639138e9975ba99111d5df4e0f349ac347331a2af858c0526c0ba15faa4e",
+    "note": "Current release-candidate environment file. It includes the official PyTorch CUDA 12.1 extra package index for the pinned torch and torchvision CUDA 12.1 wheels. The earlier sanitized baseline is retained separately in wam310_environment_sanitized."
+  },
+  "wam_upstream_snapshot": {
+    "repository": "https://github.com/facebookresearch/watermark-anything",
+    "commit": "2c08af04d037d5667c02f6ddebbda9ff04581c3e",
+    "commit_date": "2025-06-20",
+    "commit_message": "Update inference_utils.py",
+    "fingerprint_audit": "protocols/wam_upstream_fingerprint_audit.csv",
+    "fingerprint_audit_sha256": "8e73dc10d3110fbc3b73126a8ff1213247151eb913e76d3e08e7b77d3869afb6",
+    "matched_selected_files": 40,
+    "scope_note": "The comparison covers 40 selected files only. The original experiment directory had no Git metadata, so the complete historical checkout and identity of every file cannot be established."
   }
 }

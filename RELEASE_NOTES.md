@@ -27,3 +27,25 @@ Zenodo DOI is assigned at this stage.
 Run the documented smoke tests on a clean WAM checkout, confirm all output paths,
 review the package license scope, and then create the GitHub repository and Zenodo
 archive. Insert the final repository URL and DOI only after they have been verified.
+
+
+## Additional pre-release clarifications
+
+- Clarified that the manuscript source archive and supporting evidence archives are documented by provenance hashes but are not included in this repository.
+- Added attribution for metadata derived from COCO instance annotations and clarified the distinction between annotation licensing and image-level rights.
+- Documented the official PyTorch CUDA 12.1 wheel index for the pinned PyTorch and torchvision versions.
+- Explained the initial Smoke5 launch failure and retained the successful retry record.
+
+## Additional upstream-source and reproduction clarifications
+
+- Recorded the official WAM reference commit and a file-by-file fingerprint comparison for 40 selected upstream files.
+- Added the 40-file fingerprint record under `protocols/wam_upstream_fingerprint_audit.csv`.
+- Replaced wholesale overlay instructions with instructions that keep the upstream checkout and this package separate.
+- Corrected the LaMa manifest and PyTorch hub-cache paths in the reproduction instructions.
+
+## Additional upstream-source and reproduction clarifications
+
+- Recorded the official WAM reference commit and a file-by-file fingerprint comparison for 40 selected upstream files.
+- Added the 40-file fingerprint record under `protocols/wam_upstream_fingerprint_audit.csv`.
+- Replaced wholesale overlay instructions with instructions that keep the upstream checkout and this package separate.
+- Corrected the LaMa manifest and PyTorch hub-cache paths in the reproduction instructions.

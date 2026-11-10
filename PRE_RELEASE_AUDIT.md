@@ -2,12 +2,17 @@
 
 ## Checks completed
 
-- The archive contains 156 files in total: 155 payload files plus `SHA256SUMS.txt`.
+- The archive contains 157 files in total: 156 payload files plus `SHA256SUMS.txt`.
 - All 38 Python files parse successfully with Python's AST parser.
 - Text-file scan found no machine-specific absolute paths tied to the original Linux or macOS user directories.
 - Text-file scan found no matches for common GitHub personal-access-token, AWS access-key, private-key, or generic API-key patterns.
 - No WAM checkpoint, LaMa checkpoint, COCO image archive, or DIV2K image archive is included.
 - SHA-256 checksums are provided in `SHA256SUMS.txt`.
+- The LaMa Smoke5 execution record preserves both attempts: `run.log` documents the initial import failure, while `run_retry.log` documents the successful five-image, 30-row retry.
+
+- The Git blob SHA-1 identifiers of 40 selected WAM files match the official upstream commit `2c08af04d037d5667c02f6ddebbda9ff04581c3e`; the file-by-file record is in `protocols/wam_upstream_fingerprint_audit.csv`. This does not establish that every file in the experiment directory is identical to upstream, because the original experiment directory did not retain Git metadata.
+
+- The Git blob SHA-1 identifiers of 40 selected WAM files match the official upstream commit `2c08af04d037d5667c02f6ddebbda9ff04581c3e`; the file-by-file record is in `protocols/wam_upstream_fingerprint_audit.csv`. This does not establish that every file in the experiment directory is identical to upstream, because the original experiment directory did not retain Git metadata.
 
 ## Checks not yet completed
 

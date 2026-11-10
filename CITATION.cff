@@ -3,7 +3,6 @@ message: "If you use this software or its accompanying research records, please 
 title: "Reproducibility package for Fixed-Budget Anchor--Satellite Region Allocation for Robust Localized Image Watermarking"
 type: software
 version: 0.1.0
-date-released: 2026-11-09
 license: MIT
 keywords:
   - localized image watermarking

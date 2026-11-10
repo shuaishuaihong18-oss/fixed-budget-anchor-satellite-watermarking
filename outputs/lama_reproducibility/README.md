@@ -16,3 +16,12 @@ The archive does not redistribute COCO images/annotations, the official WAM repo
 - `full382_20261103/final_statistics/`: strategy summaries and pairwise comparisons.
 - `full382_20261103/statistical_analysis/`: degradation and Friedman/post-hoc analyses.
 - `full382_20261103/metadata.json`: experiment settings and source hashes.
+
+
+## Smoke-test log interpretation
+
+`smoke5/run.log` preserves the initial launch attempt, which stopped with `ModuleNotFoundError` because the WAM `notebooks` module was unavailable in that invocation. The initial log is retained as part of the execution record. `smoke5/run_retry.log` records the successful retry: all five images were processed and 30 strategy-image rows were written. The successful retry, rather than the initial failed launch, is the completed Smoke5 run.
+
+## Reproduction path clarification
+
+Set `COCO_MANIFEST` to `$PACKAGE_ROOT/manifests/COCO500_clean_manifest.csv`, where `PACKAGE_ROOT` is this reproducibility package. The full runner uses `TORCH_HOME/hub/checkpoints/big-lama.pt` for the SimpleLama checkpoint cache; it does not read a `LAMA_CHECKPOINT` environment variable. Keep the upstream WAM checkout separate and set `WAM_ROOT` to that checkout before running the scripts.
