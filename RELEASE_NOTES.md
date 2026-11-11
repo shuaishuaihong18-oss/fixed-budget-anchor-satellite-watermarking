@@ -4,7 +4,7 @@ This version collects the authors' region-allocation and regional-readout implem
 
 ## Repository status
 
-The GitHub repository has been created and the release-candidate files are committed to the `main` branch. Set the repository visibility to Public and check access without signing in before citing it as a public resource. No Zenodo DOI has been assigned.
+The GitHub repository is set to Public, and the release-candidate files are committed to the `main` branch. Confirm that the repository and required files are accessible in a logged-out browser session before citing it as a public resource. No Zenodo DOI has been assigned.
 
 ## Changes included in this version
 

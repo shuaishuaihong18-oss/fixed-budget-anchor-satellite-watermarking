@@ -8,12 +8,13 @@
 - A text-file scan found no matches for common GitHub personal-access-token, AWS access-key, private-key, or generic API-key patterns.
 - No WAM checkpoint, LaMa checkpoint, COCO image archive, or DIV2K image archive is included.
 - The 156 entries in `SHA256SUMS.txt` were verified against the package files.
+- GitHub repository metadata reports the repository visibility as Public.
 - The LaMa Smoke5 record preserves both launch attempts. `run.log` records the initial import failure; `run_retry.log` records the successful retry, in which five images were processed and 30 strategy-image rows were written.
 - The Git blob SHA-1 identifiers of 40 selected WAM files match the corresponding files at upstream commit `2c08af04d037d5667c02f6ddebbda9ff04581c3e`. The file-by-file results are in `protocols/wam_upstream_fingerprint_audit.csv`.
 
 ## Checks still required before public release
 
-- Set the GitHub repository visibility to Public and confirm that the repository and its files can be accessed without signing in.
+- Open the repository and the required source/configuration files in a browser session that is not signed in to GitHub. This logged-out access check has not yet been independently confirmed.
 - A clean-machine, end-to-end run of all experiments has not been performed as part of this packaging work.
 - Users must install the upstream WAM and LaMa dependencies and obtain the required checkpoints and datasets separately.
 - Review the applicable third-party licenses and confirm that the included result records and logs are suitable for public distribution.

@@ -159,4 +159,8 @@ The MIT license applies only to the authors' original source-code files identifi
 
 ## Access and version
 
-Set the GitHub repository to Public and confirm that its files can be opened in a browser session that is not signed in to GitHub before citing it as a publicly available resource. No Zenodo DOI has been assigned. For a fixed version, cite a tagged release or an exact commit rather than the moving `main` branch.
+The GitHub repository visibility is set to Public. Before citing the repository in a manuscript or response letter, confirm that the repository page and the required files can be opened in a browser session that is not signed in to GitHub.
+
+Repository: https://github.com/shuaishuaihong18-oss/fixed-budget-anchor-satellite-watermarking
+
+No Zenodo DOI has been assigned. For a fixed version, cite an exact commit or a tagged release rather than the moving `main` branch.
