@@ -1,10 +1,14 @@
 # Reproducibility package — Fixed-Budget Anchor--Satellite Watermarking
 
-**Status: prepared release candidate 0.1.0; not yet published.** This package contains the authors' region-allocation and regional-readout implementation, the selected revision-evidence files, and the 382-image LaMa object-inpainting evidence bundle. The original manuscript-source and supporting-evidence archives listed in `protocols/source_archive_provenance.json` are not redistributed. The repository does include the selected evidence files described below. The provenance file records the original archives' filenames, byte sizes, and SHA-256 digests, together with the environment and upstream-source provenance. This package is not a public release until deposited at a stable repository/archive and assigned an immutable release identifier.
+This repository accompanies the manuscript *Fixed-Budget Anchor--Satellite Region Allocation for Robust Localized Image Watermarking*. It contains the authors' region-allocation and regional-readout implementation, evaluation scripts, configurations, and selected experiment records.
+
+The implementation uses the official upstream Watermark Anything (WAM) repository. This repository adds the authors' `watermark_anything/redundant_region.py` module and the scripts used for evaluation and analysis; it does not replace or redistribute the upstream WAM source code or checkpoint.
+
+The original manuscript-source archive and the complete supporting-evidence archives are not included. Their filenames, sizes, and SHA-256 digests are recorded in `protocols/source_archive_provenance.json`. The selected experiment records and supporting files described below are included.
 
 ## Scope
 
-The package contains the authors’ region-allocation and regional-readout implementation, evaluation and analysis scripts, raw records for the main comparison and reported ablations, summary tables, data manifests, execution logs, the LaMa object-inpainting runner and paired outputs, and the exported `wam310` environment specification. It is intended to be used with the official upstream Watermark Anything (WAM) repository.
+The package is intended to be used alongside the specified upstream WAM revision. Keep the upstream checkout separate from this repository; the reproduction instructions below show how to add the authors' regional module without replacing upstream files.
 
 ## Included
 
@@ -22,7 +26,7 @@ The package contains the authors’ region-allocation and regional-readout imple
 ## Not included
 
 - Official WAM source repository, pretrained checkpoint (`wam_mit.pth`) or `params.json`.
-- COCO or DIV2K image files and the full COCO annotation archive. The relevant image manifests and selected LaMa annotations are included; obtain the original data from their official sources and comply with their terms.
+- COCO and DIV2K image files and the full COCO annotation archive. Image manifests and selected metadata derived from COCO instance annotations are included; the source image files and complete annotation archive are not.
 - Pretrained LaMa weights. Obtain them from the upstream release.
 
 ## Recorded environment
@@ -151,8 +155,8 @@ should not be overwritten.
 
 ## License and third-party materials
 
-The included MIT license covers only the authors' original code files. It does not relicense upstream WAM materials, model checkpoints, datasets, pretrained LaMa weights, or third-party packages. COCO annotation-derived metadata is attributed separately under the applicable CC BY 4.0 terms. See `LICENSE_SCOPE.md` and `UPSTREAM_DEPENDENCIES.md`.
+The MIT license applies only to the authors' original source-code files identified in `LICENSE_SCOPE.md`. It does not grant rights to upstream WAM materials, model checkpoints, datasets, pretrained LaMa weights, or third-party packages. COCO annotation-derived metadata is attributed separately under the applicable CC BY 4.0 terms. See `LICENSE_SCOPE.md` and `UPSTREAM_DEPENDENCIES.md`.
 
-## Public-release checklist
+## Access and version
 
-Before resubmission: (1) deposit this package in a public repository/archive; (2) verify access without login and record an immutable release identifier; (3) check the README and paths on a fresh WAM checkout; (4) verify that upstream checkpoint, data and LaMa-weight instructions are clear; and (5) insert the real repository URL and release identifier into the manuscript and response letter. Do not insert a placeholder or an unverified URL.
+Set the GitHub repository to Public and confirm that its files can be opened in a browser session that is not signed in to GitHub before citing it as a publicly available resource. No Zenodo DOI has been assigned. For a fixed version, cite a tagged release or an exact commit rather than the moving `main` branch.

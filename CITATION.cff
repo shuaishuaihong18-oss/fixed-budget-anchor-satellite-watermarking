@@ -3,7 +3,12 @@ message: "If you use this software or its accompanying research records, please 
 title: "Reproducibility package for Fixed-Budget Anchor--Satellite Region Allocation for Robust Localized Image Watermarking"
 type: software
 version: 0.1.0
-license: MIT
+abstract: >-
+  This repository contains the authors' region-allocation and regional-readout
+  implementation, evaluation scripts, configurations, and experiment records.
+  The MIT license applies only to the authors' original source-code files
+  identified in LICENSE_SCOPE.md. Third-party materials and research records
+  remain subject to their applicable terms.
 keywords:
   - localized image watermarking
   - fixed embedding budget
