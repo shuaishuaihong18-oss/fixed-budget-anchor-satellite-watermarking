@@ -1,6 +1,6 @@
 # Manuscript result provenance - Multimedia Systems full-length paper
 
-This map follows the consolidated Regular Paper manuscript, which contains 17 numbered tables and 4 numbered figures in its main text. Numerical results are unchanged from the original fixed-budget experiment records. The former supplementary tables are now integrated into the main manuscript. The archive still does not include the WAM/LaMa checkpoints or third-party source images.
+This map follows the consolidated Regular Paper manuscript, which contains 18 numbered tables and 5 numbered figures in its main text. The original experimental measurements are unchanged. The additional attack-weight analysis is a descriptive reweighting of the existing per-attack means; it is not a new model run or an inferential test. The former supplementary tables and essential protocol definitions are integrated into the main manuscript. The archive does not include WAM/LaMa checkpoints or third-party source images.
 
 | Main-text item | Reproducibility evidence |
 |---|---|
@@ -18,10 +18,12 @@ This map follows the consolidated Regular Paper manuscript, which contains 17 nu
 | Table 15, placement IoU sensitivity | `results_summaries/iou_sensitivity_manuscript_summary.csv`; `results_raw/iou_sensitivity_results.csv`. |
 | Table 16, original/watermarked visual quality | `results_summaries/quality_summary.csv`; `results_raw/quality_per_image.csv`; `scripts/quality_only.py`. |
 | Table 17, runtime | `results_summaries/runtime_cost_summary.json`; `results_raw/runtime_cost_results.csv`; `scripts/runtime_cost_audit.py`. |
+| Table 18, attack-weight sensitivity | `results_summaries/attack_weight_sensitivity.csv`, generated from `results_summaries/final_descriptive_by_attack.csv` by `scripts/analyze_attack_weight_sensitivity.py`. Erase40 receives weight p; the remaining three edits share (1-p)/3. The reported intervals identify where Hybrid has the highest descriptive weighted mean among the six fixed-budget policies; no inferential tests are attached. |
 | Fig. 1, original illustration of support survival | The original composite is supplied within the manuscript source ZIP (`figures/Fig1.pdf` and `figures/Fig1.svg`). It is schematic and is not a detector-map measurement. |
 | Fig. 2, per-attack Recovery31 trade-off | Values from `results_summaries/final_descriptive_by_attack.csv`; exact 24 plotted values and figure PDF are supplied in the manuscript source ZIP. |
 | Fig. 3, COCO500 anchor-ratio trade-off | Values from `results_summaries/rho_descriptive.csv`; the manuscript source ZIP supplies `figures/Fig3_data.csv`, `figures/Fig3.pdf`, and the plotting script. |
 | Fig. 4, anchor-removal effect | Values from `results_summaries/component_removal_attacks_500_condition_means.csv`; the manuscript source ZIP supplies `figures/Fig4_data.csv`, `figures/Fig4.pdf`, and the plotting script. |
+| Fig. 5, attack-weight sensitivity | Recovery31 values are taken from `results_summaries/final_descriptive_by_attack.csv`; the manuscript source ZIP supplies the selected values in `figures/Fig5_data.csv` and the reproducible plotting script `figures/plot_fig5_attack_weight_sensitivity.py`. |
 | Equal-budget anchor-free control | `results_summaries/anchor_equal_budget_overall_four_attack_tests.csv`; source records in `results_raw/anchor_free_equal_budget_results.csv`. |
 | Placement fallback and clean-image negative control | `results_raw/placement_audit_500.csv`; `results_summaries/clean_negative_control_summary.json`; `results_raw/clean_negative_control_results.csv`. |
 

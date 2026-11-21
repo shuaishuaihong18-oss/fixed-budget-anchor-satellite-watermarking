@@ -1,0 +1,5 @@
+dataset,metric,erase40_weight_lower,erase40_weight_upper,interpretation
+COCO500,BitAcc,0.092415,0.810238,exploratory descriptive ranking; no inferential test
+COCO500,Recovery31,0.113466,0.679144,exploratory descriptive ranking; no inferential test
+DIV2K100,BitAcc,0.077025,0.618705,exploratory descriptive ranking; no inferential test
+DIV2K100,Recovery31,0.137725,0.590909,exploratory descriptive ranking; no inferential test
